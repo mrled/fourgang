@@ -3,3 +3,7 @@
 # Low value here in intentional - we don't want these records cached anywhere
 # (Probably that's not a concern, as this is an intenral only server, but...)
 bind_record_ttl: 15
+
+# NetworkManager connection name
+# See 'nmcli con' for a list
+ethernet_connection_name: Wired connection 1

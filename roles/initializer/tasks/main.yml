@@ -22,3 +22,9 @@
 
 - name: Enable BIND
   systemd: name=named state=started enabled=yes
+
+# Stupid bug means can't use nmcli module
+# https://github.com/ansible/ansible/issues/48055
+- name: Use BIND for local DNS resolution
+  # nmcli: conn_name="{{ ethernet_connection_name }}" dns4="127.0.0.1"
+  comamnd: nmcli con mod '{{ ethernet_connection_name }}' ipv4.dns "127.0.0.1"

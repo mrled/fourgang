@@ -32,6 +32,11 @@ options {
     };
 
     recursion yes;
+    ; forwarders {
+    ;     1.1.1.1;
+    ;     1.0.0.1;
+    ; };
+    ; forward only;
 
     dnssec-enable yes;
     dnssec-validation yes;
@@ -41,7 +46,7 @@ options {
     pid-file "/run/named/named.pid";
     session-keyfile "/run/named/session.key";
 
-    # https://fedoraproject.org/wiki/Changes/CryptoPolicy
+    ; https://fedoraproject.org/wiki/Changes/CryptoPolicy
     include "/etc/crypto-policies/back-ends/bind.config";
 };
 

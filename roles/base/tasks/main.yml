@@ -1,5 +1,18 @@
 ---
 
+# Stupid bug means nmcli module is broken anyway
+# https://github.com/ansible/ansible/issues/48055
+# - name: Install Ansible prereqs for nmcli module
+#   # https://docs.ansible.com/ansible/latest/modules/nmcli_module.html
+#   pip: name={{ item }} state=latest
+#   with_items:
+#     # - libnma
+#     # - nm-connection-editor
+#     # - python3-libsemanage
+#     - python3-networkmanager
+#     # - python3-policycoreutils
+#   when: ansible_distribution == 'Fedora'
+
 - name: Set timezone
   timezone: name=US/Central
   # Restart crond per Ansible recommendation: <https://docs.ansible.com/ansible/latest/modules/timezone_module.html>
