@@ -1,0 +1,20 @@
+router:
+  hosts:
+    fourgang.home.micahrl.com:
+
+initializer:
+  hosts:
+    psyche.fourgang.micahrl.com:
+      # Always use its static address to reach it
+      # This lets us reach the host directly to configure BIND on a blank machine
+      ansible_host: "{{ ipv4address | ipaddr('address') }}"
+
+# TODO: I think I can have 2 nameservers if I list them both here
+# then in the named zone template I can make a list of other nameservers and refer to them
+nameservers:
+  hosts:
+    psyche.fourgang.micahrl.com:
+
+dnshosts:
+  children:
+    nameservers:

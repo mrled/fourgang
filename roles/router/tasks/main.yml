@@ -1,0 +1,91 @@
+---
+
+# - name: RAW Show router info
+#   raw: /system routerboard print
+
+- name: Show router info
+  routeros_command:
+    commands:
+      - /system routerboard print
+
+- name: Disable unneeded services
+  routeros_command:
+    commands:
+      - /ip service disable telnet,ftp,www,www-ssl,api,api-ssl,winbox
+      - /ip service print
+
+- name: Configure secure SSH
+  routeros_command:
+    commands:
+      - /ip ssh set strong-crypto=yes forwarding-enabled=yes
+      - /ip ssh print
+
+# TODO: IPv6?
+
+- name: Disable DHCP
+  routeros_command:
+    commands:
+      - /ip dhcp-server disable [/ip dhcp-server find name="defconf"]
+      - /ip dhcp-server print
+
+- name: Configure IP
+  routeros_command:
+    commands:
+      - /ip address set [/ip address find interface="bridge"] address="{{ ipv4address }}"
+      - /ip address print
+
+# Default rules on my HAP AC2:
+# [root@MikroTik] /ip firewall filter> print
+# Flags: X - disabled, I - invalid, D - dynamic
+#  0  D ;;; special dummy rule to show fasttrack counters
+#       chain=forward action=passthrough
+#  1    ;;; defconf: accept established,related,untracked
+#       chain=input action=accept connection-state=established,related,untracked
+#  2    ;;; defconf: drop invalid
+#       chain=input action=drop connection-state=invalid
+#  3    ;;; defconf: accept ICMP
+#       chain=input action=accept protocol=icmp
+#  4    ;;; defconf: drop all not coming from LAN
+#       chain=input action=drop in-interface-list=!LAN
+#  5    ;;; defconf: accept in ipsec policy
+#       chain=forward action=accept ipsec-policy=in,ipsec
+#  6    ;;; defconf: accept out ipsec policy
+#       chain=forward action=accept ipsec-policy=out,ipsec
+#  7    ;;; defconf: fasttrack
+#       chain=forward action=fasttrack-connection connection-state=established,related
+#  8    ;;; defconf: accept established,related, untracked
+#       chain=forward action=accept connection-state=established,related,untracked
+#  9    ;;; defconf: drop invalid
+#       chain=forward action=drop connection-state=invalid
+# 10    ;;; defconf:  drop all from WAN not DSTNATed
+#       chain=forward action=drop connection-state=new connection-nat-state=!dstnat in-interface-list=WAN
+
+- name: Configure firewall
+  routeros_command:
+    commands:
+      # Show rules at start
+      - /ip firewall filter print
+      # Remove all rules
+      - /ip firewall filter remove [/ip firewall filter find]
+      # Configure new rules
+      - /ip firewall filter add chain=forward action=passthrough comment="dummy rule for fasttrack counters"
+      - /ip firewall filter add chain=input action=accept connection-state=established,related,untracked
+      - /ip firewall filter add chain=input action=drop connection-state=invalid
+      - /ip firewall filter add chain=input action=accept protocol=icmp comment="accept ICMP from anywhere"
+      - /ip firewall filter add chain=input action=accept protocol=tcp dst-port=22 comment="accept SSH from anywhere"
+      #- chain=input action=drop in-interface-list=!LAN comment="Drop all packets not coming from lan"
+      - /ip firewall filter add chain=forward action=fasttrack-connection connection-state=established,related comment="fasttrack"
+      - /ip firewall filter add chain=forward action=accept connection-state=established,related,untracked
+      - /ip firewall filter add chain=forward action=drop connection-state=invalid
+      #- chain=forward action=drop connection-state=new connection-nat-state=!dstnat in-interface-list=WAN
+      #- /ip firewall filter add chain=forward action=accept in-interface=wlan2 out-interface=bridge
+      #- /ip firewall filter add chain=forward action=accept in-interface=bridge out-interface=wlan2
+
+# TODO: Maybe lock down the firewall further?
+
+- name: Show router info
+  routeros_command:
+    commands:
+      - /system routerboard print
+      - /interface wireless registration-table print
+      - /user print

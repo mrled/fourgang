@@ -1,0 +1,24 @@
+---
+
+# TODO: Put in Ansible config for the initial manual config that I did as well
+# Doing that is kinda fragile but can help prevent drift
+
+- name: Install BIND
+  package: name={{ item }} state=latest
+  with_items:
+    - bind
+    - bind-utils
+  notify: restart named
+
+- name: Create zones directory
+  file: path=/etc/named/zones state=directory owner=root group=named mode=0770
+
+- name: Install bind config files
+  template: src=bind/{{ item.src }} dest={{ item.dest }} owner=root group=named mode=0660
+  with_items:
+    - { src: "named.conf.j2", dest: "/etc/named.conf" }
+    - { src: "db.cluster.dns.j2", dest: "/etc/named/zones/db.{{ cluster_domain }}" }
+    - { src: "db.reverse4.dns.j2", dest: "/etc/named/zones/db.{{ cluster_revdns4 }}" }
+
+- name: Enable BIND
+  systemd: name=named state=started enabled=yes

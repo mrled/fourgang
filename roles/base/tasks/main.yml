@@ -1,0 +1,17 @@
+---
+
+- name: Set timezone
+  timezone: name=US/Central
+  # Restart crond per Ansible recommendation: <https://docs.ansible.com/ansible/latest/modules/timezone_module.html>
+  notify: restart crond
+
+- name: Set hostname
+  hostname: name={{ inventory_hostname }}
+
+- name: Disable the Fedora Cockpit service
+  systemd: name=cockpit enabled=no state=stopped
+  when: ansible_distribution == 'Fedora'
+
+- name: Block the Fedora Cockpit port
+  firewalld: service=cockpit permanent=yes state=disabled
+  when: ansible_distribution == 'Fedora'

@@ -1,0 +1,8 @@
+---
+
+- name: Configure the cluster's initializer
+  hosts: initializer
+  roles:
+    - { name: base, tags: ['base'] }
+    - { name: initializer, tags: ['initializer'] }
+

@@ -1,0 +1,26 @@
+---
+
+cluster_domain: fourgang.micahrl.com
+
+# See also:
+# - https://simpledns.com/private-ipv6
+# - https://en.wikipedia.org/wiki/Unique_local_address
+# global ID: 8be407779c
+# subnet ID: 0004
+# cluster_ipv6net: fd8b:e407:779c:0004::/64
+# cluster_revdns6: ...
+
+cluster_ipv4net: 192.168.4.0/24
+cluster_revdns4: 4.168.192.in-addr.arpa
+
+ipv4address: "{{ cluster_ipv4net | ipaddr(network_offset) }}"
+
+# Who is the owner of DNS for this cluster?
+# It's an email address with '@' replaced with '\.'
+# So me@example.com -> me\.example.com
+# https://en.wikipedia.org/wiki/SOA_record
+bind_responsible_party: me\.micahrl.com
+
+cluster_ifname: GANG4
+cluster_ifdevice: eth0
+

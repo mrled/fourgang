@@ -1,0 +1,7 @@
+---
+
+# Setting this to the epoch is the easiest thing I could think of
+# It's used to notify slave DNS servers that they should update,
+# so it should increment on every change.
+# If it's the epoch, it will increment (a lot) on every deployment.
+bind_zone_serial: "{{ ansible_date_time.epoch }}"

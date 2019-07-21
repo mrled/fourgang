@@ -1,0 +1,7 @@
+---
+
+- name: Configure the MikroTik router
+  hosts: fourgang.home.micahrl.com
+  gather_facts: no
+  roles:
+    - { name: router, tags: ['router'] }

@@ -1,0 +1,16 @@
+---
+
+# https://docs.ansible.com/ansible/latest/network/user_guide/platform_routeros.html
+
+# This module is very slow but does worka
+ansible_connection: network_cli
+ansible_network_os: routeros
+ansible_user: root
+
+# Connections fail with bad user/password if I'm using agent auth - even if ssh works fine
+ansible_password: "{{ vault_routeros_root_password }}"
+
+# Become fails on my Mikrotik even tho docs say to use it? whatever
+ansible_become: no
+
+network_offset: 1

@@ -1,0 +1,24 @@
+$ORIGIN {{ cluster_revdns4 }}.
+$TTL {{ bind_record_ttl }}
+
+@ IN SOA {{ cluster_domain }}. {{ bind_responsible_party }}. (
+    {{ bind_zone_serial }}
+    3600                    ; refresh - how long til secondary nameservers should query this record for changes
+    1800                    ; retry - how long should they retry the refresh if master doesn't respond
+    3600000                 ; expire - how long should they wait before they stop answering reqs if master doesn't respond
+    {{ bind_record_ttl }}   ; negative cache ttl - how long resolver should consider a negative result for a subdomain to be valid before retrying
+)
+
+{% for host in groups['nameservers'] %}
+@ IN NS {{ host }}.
+{% endfor %}
+
+{#
+  TODO: This assumes your network is a /24 or less and doesn't work otherwise, oh well
+  Because the zone is 4.168.192 (reverse of 192.168.4.0/24)
+  and the offset thing only works for that; if you had a /23 it would stop working for address 256a
+#}
+
+{% for host in groups['dnshosts'] %}
+{{ hostvars[host].network_offset }} IN PTR {{ host | ipaddr('address') }}.
+{% endfor %}
