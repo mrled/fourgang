@@ -21,8 +21,8 @@
     - { src: "db.reverse4.dns.j2", dest: "/etc/named/zones/db.{{ cluster_revdns4 }}" }
   notify: restart named
 
-- name: Allow BIND through the firewall
-  firewalld: service=named permanent=yes state=enabled
+# - name: Allow BIND through the firewall
+#   firewalld: service=named permanent=yes state=enabled
 
 - name: Enable BIND
   systemd: name=named state=started enabled=yes
@@ -32,3 +32,24 @@
 - name: Use BIND for local DNS resolution
   # nmcli: conn_name="{{ ethernet_connection_name }}" dns4="127.0.0.1"
   command: nmcli con mod '{{ ethernet_connection_name }}' ipv4.dns "127.0.0.1"
+
+- name: Install DHCPD
+  package: name=dhcp state=latest
+  notify: restart dhcpd
+  tags: dhcpd
+
+- name: Install DHCPD config files
+  template: src=dhcpd/dhcpd.conf.j2 dest=/etc/dhcp/dhcpd.conf owner=root group=root mode=0600
+  notify: restart dhcpd
+  tags: dhcpd
+
+# - name: Allow DHCPD through the firewall
+#   firewalld: service=dhcp permanent=yes state=enabled
+
+- name: Enable DHCPD
+  systemd: name=dhcpd state=started enabled=yes
+  tags: dhcpd
+
+- name: Install tools required for Das U-Boot
+  package: name=uboot-tools state=latest
+

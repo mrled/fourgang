@@ -7,3 +7,17 @@ bind_record_ttl: 15
 # NetworkManager connection name
 # See 'nmcli con' for a list
 ethernet_connection_name: Wired connection 1
+
+dhcpd_default_lease_time: 600
+dhcpd_max_lease_time: 7200
+
+dhcpd_unknown_client_min_offset: 200
+dhcpd_unknown_client_max_offset: 250
+dhcpd_known_client_min_offset: 20
+dhcpd_known_client_max_offset: 199
+
+tftp_kernel_dir: /var/tftp
+tftp_kernel_filename: zImage
+tftp_kernel: "{{ tftp_kernel_dir }}/{{ tftp_kernel_filename }}"
+
+bootp_nfs_root: /var/nfsroot/default

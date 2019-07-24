@@ -1,0 +1,40 @@
+# dhcpd.conf
+
+default-lease-time {{ dhcpd_default_lease_time }};
+max-lease-time {{ dhcpd_max_lease_time }};
+
+one-lease-per-client true;
+
+shared-network {{ cluster_domain }} {
+  option domain-name "{{ cluster_domain }}";
+  option domain-name-servers {{ groups['nameservers'] | list | join(', ') }};
+  authoritative;
+
+  subnet {{ cluster_ipv4net | ipaddr('network') }} netmask {{ cluster_ipv4net | ipaddr('netmask') }} {
+    option routers {{ router_ipv4address | ipaddr('address') }};
+    option broadcast-address {{ cluster_ipv4net | ipaddr('broadcast') }};
+
+    pool {
+      range {{ dhcpd_unknown_client_min_addr }} {{ dhcpd_unknown_client_max_addr }};
+      allow unknown-clients;
+    }
+
+    pool {
+      range {{ dhcpd_known_client_min_addr }} {{ dhcpd_known_client_max_addr }};
+      deny unknown-clients;
+
+{% for host in groups['dhcpclients'] %}
+      host {{ host }} {
+        option host-name "{{ host }}";
+        hardware ethernet {{ hostvars[host].hwaddr }};
+        fixed-address {{ hostvars[host].ipv4address | ipaddr('address') }};
+	next-server {{ ipv4address | ipaddr('address') }};
+	option root-path "{{ bootp_nfs_root }}";
+	filename "{{ tftp_kernel }}";
+      }
+{% endfor %}
+    }
+
+  }
+
+}

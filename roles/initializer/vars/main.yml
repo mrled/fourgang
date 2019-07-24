@@ -5,3 +5,8 @@
 # so it should increment on every change.
 # If it's the epoch, it will increment (a lot) on every deployment.
 bind_zone_serial: "{{ ansible_date_time.epoch }}"
+
+dhcpd_unknown_client_min_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_unknown_client_min_offset) | ipaddr('address')  }}"
+dhcpd_unknown_client_max_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_unknown_client_max_offset) | ipaddr('address')  }}"
+dhcpd_known_client_min_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_known_client_min_offset) | ipaddr('address') }}"
+dhcpd_known_client_max_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_known_client_max_offset) | ipaddr('address') }}"
