@@ -5,7 +5,7 @@ router:
 initializer:
   hosts:
     psyche.fourgang.micahrl.com:
-      hwaddr: "00:1e:06:36:84:0c"
+      hwaddr: "b8:27:eb:73:d2:86"
       network_offset: 10
 
       # Always use its static address to reach it
