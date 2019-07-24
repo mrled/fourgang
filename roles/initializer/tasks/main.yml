@@ -13,12 +13,16 @@
 - name: Create zones directory
   file: path=/etc/named/zones state=directory owner=root group=named mode=0770
 
-- name: Install bind config files
+- name: Install BIND config files
   template: src=bind/{{ item.src }} dest={{ item.dest }} owner=root group=named mode=0660
   with_items:
     - { src: "named.conf.j2", dest: "/etc/named.conf" }
     - { src: "db.cluster.dns.j2", dest: "/etc/named/zones/db.{{ cluster_domain }}" }
     - { src: "db.reverse4.dns.j2", dest: "/etc/named/zones/db.{{ cluster_revdns4 }}" }
+  notify: restart named
+
+- name: Allow BIND through the firewall
+  firewalld: service=named permanent=yes state=enabled
 
 - name: Enable BIND
   systemd: name=named state=started enabled=yes
@@ -27,4 +31,4 @@
 # https://github.com/ansible/ansible/issues/48055
 - name: Use BIND for local DNS resolution
   # nmcli: conn_name="{{ ethernet_connection_name }}" dns4="127.0.0.1"
-  comamnd: nmcli con mod '{{ ethernet_connection_name }}' ipv4.dns "127.0.0.1"
+  command: nmcli con mod '{{ ethernet_connection_name }}' ipv4.dns "127.0.0.1"

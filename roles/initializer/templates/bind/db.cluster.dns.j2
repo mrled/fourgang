@@ -14,5 +14,5 @@ $TTL {{ bind_record_ttl }}
 {% endfor %}
 
 {% for host in groups['dnshosts'] %}
-{{ host }}. IN A {{ hostvars[host].ipv4address }}
+{{ host }}. IN A {{ hostvars[host].ipv4address | ipaddr('address') }}
 {% endfor %}

@@ -1,4 +1,4 @@
 ---
 
-- name: restart bind
+- name: restart named
   systemd: name=named state=restarted
