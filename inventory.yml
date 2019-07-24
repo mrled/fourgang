@@ -5,6 +5,9 @@ router:
 initializer:
   hosts:
     psyche.fourgang.micahrl.com:
+      hwaddr: "00:1e:06:36:84:0c"
+      network_offset: 10
+
       # Always use its static address to reach it
       # This lets us reach the host directly to configure BIND on a blank machine
       ansible_host: "{{ ipv4address | ipaddr('address') }}"
@@ -14,6 +17,26 @@ initializer:
 nameservers:
   hosts:
     psyche.fourgang.micahrl.com:
+
+lizards:
+  hosts:
+    ego01.fourgang.micahrl.com:
+      hwaddr: "00:1e:06:36:84:0c"
+      network_offset: 21
+    ego02.fourgang.micahrl.com:
+      hwaddr: "UNKNOWN"
+      network_offset: 22
+    # ego03.fourgang.micahrl.com:
+    #   hwaddr: "UNKNOWN"
+    #   network_offset: 23
+    # ego04.fourgang.micahrl.com:
+    #   hwaddr: "UNKNOWN"
+    #   network_offset: 24
+
+# All dhcpclients must have a hwaddr
+dhcpclients:
+  children:
+    lizards:
 
 dnshosts:
   children:

@@ -13,4 +13,5 @@ ansible_password: "{{ vault_routeros_root_password }}"
 # Become fails on my Mikrotik even tho docs say to use it? whatever
 ansible_become: no
 
-network_offset: 1
+network_offset: "{{ router_network_offset }}"
+ipv4address: "{{ router_ipv4address }}"
