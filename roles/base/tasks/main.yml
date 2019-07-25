@@ -25,10 +25,10 @@
   systemd: name=cockpit enabled=no state=stopped
   when: ansible_distribution == 'Fedora'
 
-- name: Block the Fedora Cockpit port
-  firewalld: service=cockpit permanent=yes state=disabled
-  when: ansible_distribution == 'Fedora'
+# - name: Block the Fedora Cockpit port
+#   firewalld: service=cockpit permanent=yes state=disabled
+#   when: ansible_distribution == 'Fedora'
 
 - name: Ensure system is up to date
   dnf: name="*" state=latest
-  when: ansible_distribution == 'Fedora'
+  when: ansible_distribution == 'Fedora' and update_system_packages
