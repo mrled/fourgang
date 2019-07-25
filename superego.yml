@@ -1,0 +1,8 @@
+---
+
+- name: Configure the cluster's superego
+  hosts: superegos
+  roles:
+    - { name: base, tags: ['base'] }
+    - { name: superego, tags: ['superego'] }
+

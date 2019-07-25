@@ -2,9 +2,9 @@ router:
   hosts:
     fourgang.home.micahrl.com:
 
-initializer:
+superegos:
   hosts:
-    psyche.fourgang.micahrl.com:
+    superego01.fourgang.micahrl.com:
       hwaddr: "b8:27:eb:73:d2:86"
       network_offset: 10
 
@@ -16,7 +16,7 @@ initializer:
 # then in the named zone template I can make a list of other nameservers and refer to them
 nameservers:
   hosts:
-    psyche.fourgang.micahrl.com:
+    superego01.fourgang.micahrl.com:
 
 lizards:
   hosts:
