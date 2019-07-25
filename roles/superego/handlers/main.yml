@@ -1,7 +1,10 @@
 ---
 
 - name: restart named
-  systemd: name=named state=restarted
+  systemd: name=named state=restarted daemon_reload=yes
 
 - name: restart dhcpd
-  systemd: name=dhcpd state=restarted
+  systemd: name=dhcpd state=restarted daemon_reload=yes
+
+- name: restart tftpd
+  systemd: name=tftp state=restarted daemon_reload=yes

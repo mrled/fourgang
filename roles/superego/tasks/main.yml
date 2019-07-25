@@ -9,9 +9,11 @@
     - bind
     - bind-utils
   notify: restart named
+  tags: named
 
 - name: Create zones directory
   file: path=/etc/named/zones state=directory owner=root group=named mode=0770
+  tags: named
 
 - name: Install BIND config files
   template: src=bind/{{ item.src }} dest={{ item.dest }} owner=root group=named mode=0660
@@ -20,18 +22,22 @@
     - { src: "db.cluster.dns.j2", dest: "/etc/named/zones/db.{{ cluster_domain }}" }
     - { src: "db.reverse4.dns.j2", dest: "/etc/named/zones/db.{{ cluster_revdns4 }}" }
   notify: restart named
+  tags: named
 
 # - name: Allow BIND through the firewall
 #   firewalld: service=named permanent=yes state=enabled
+#   tags: named
 
 - name: Enable BIND
   systemd: name=named state=started enabled=yes
+  tags: named
 
 # Stupid bug means can't use nmcli module
 # https://github.com/ansible/ansible/issues/48055
 - name: Use BIND for local DNS resolution
   # nmcli: conn_name="{{ ethernet_connection_name }}" dns4="127.0.0.1"
   command: nmcli con mod '{{ ethernet_connection_name }}' ipv4.dns "127.0.0.1"
+  tags: named
 
 - name: Install DHCPD
   package: name=dhcp state=latest
@@ -45,11 +51,37 @@
 
 # - name: Allow DHCPD through the firewall
 #   firewalld: service=dhcp permanent=yes state=enabled
+#   tags: dhcpd
 
 - name: Enable DHCPD
   systemd: name=dhcpd state=started enabled=yes
   tags: dhcpd
 
-- name: Install tools required for Das U-Boot
-  package: name=uboot-tools state=latest
+# - name: Install tools required for Das U-Boot
+#   package: name=uboot-tools state=latest
 
+- name: Install tftp server
+  package: name=tftp-server state=latest
+  notify: restart tftpd
+  tags: tftpd
+
+- name: Create tftp service override directory
+  file: path=/etc/systemd/system/tftp.service.d state=directory owner=root group=root mode=0755
+  tags: tftpd
+
+- name: Install tftp override settings
+  template: src=tftpd/tftp.service.overrride.j2 dest=/etc/systemd/system/tftp.service.d/override.conf
+  notify: restart tftpd
+  tags: tftpd
+
+- name: Retrieve kernel and initrd
+  get_url: url={{ item.url }} dest={{ item.dest }} mode=0644
+  with_items:
+    - { url: "{{ fedora_armhfp_kernel }}", dest: "{{ tftp_kernel }}" }
+    - { url: "{{ fedora_armhfp_initrd }}", dest: "{{ tftp_initrd }}" }
+    - { url: "{{ fedora_armhfp_dtb }}", dest: "{{ tftp_dtb }}" }
+  tags: tftpd
+
+- name: Enable tftpd
+  systemd: name=tftp state=started enabled=yes
+  tags: tftpd

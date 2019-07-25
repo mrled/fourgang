@@ -16,8 +16,12 @@ dhcpd_unknown_client_max_offset: 250
 dhcpd_known_client_min_offset: 20
 dhcpd_known_client_max_offset: 199
 
-tftp_kernel_dir: /var/tftp
-tftp_kernel_filename: zImage
-tftp_kernel: "{{ tftp_kernel_dir }}/{{ tftp_kernel_filename }}"
+tftp_dir: /var/lib/tftpboot
+tftp_kernel_filename: armhfp.f30.vmlinuz
+tftp_kernel: "{{ tftp_dir }}/{{ tftp_kernel_filename }}"
+tftp_initrd_filename: armhfp.f30.initrd
+tftp_initrd: "{{ tftp_dir }}/{{ tftp_initrd_filename }}"
+tftp_dtb_filename: exynos5422-odroidxu4.dtb
+tftp_dtb: "{{ tftp_dir }}/{{ tftp_dtb_filename }}"
 
 bootp_nfs_root: /var/nfsroot/default
