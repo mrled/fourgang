@@ -2,6 +2,19 @@
 
 FOURGANG: after a group intelligence called the Gang of Four from Peter Watt's Blindsight
 
+## Ansible configuration
+
+I use Mitogen with Ansible, for funsies. Let's hope it's actually faster.
+<https://mitogen.networkgenomics.com/ansible_detailed.html>
+
+	python3 -m virtualenv venv
+	. venv/bin/activate
+	pip install -r requirements.txt
+
+Then you can just call `ansible`, `ansible-playbook`, etc, like normal.
+
+Note that if you open a new shell, you will need to dot-dource the `activate` script again.
+
 ## Networking concerns
 
 The cluster will be on its own subnet, and will route to my home network.

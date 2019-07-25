@@ -1,5 +1,11 @@
 ---
 
+# Mitogen doesn't support automatic python detection
+# https://github.com/dw/mitogen/issues/579[
+# Our hosts are Fedora 30; they should have python3 by default
+# they will not have /usr/bin/python by default
+ansible_python_interpreter: /usr/bin/python3
+
 cluster_domain: fourgang.micahrl.com
 
 # See also:
