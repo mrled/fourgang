@@ -21,7 +21,9 @@ shared-network {{ cluster_domain }} {
 
     pool {
       range {{ dhcpd_known_client_min_addr }} {{ dhcpd_known_client_max_addr }};
-      deny unknown-clients;
+      # NOTE: "deny all clients" allows reserved clients still
+      # https://serverfault.com/questions/750710/isc-dhcp-server-dynamic-and-static-leases-present
+      deny all clients;
 
 {% for host in groups['dhcpclients'] %}
       host {{ host }} {

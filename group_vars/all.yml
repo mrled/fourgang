@@ -1,7 +1,7 @@
 ---
 
 # Mitogen doesn't support automatic python detection
-# https://github.com/dw/mitogen/issues/579[
+# https://github.com/dw/mitogen/issues/597
 # Our hosts are Fedora 30; they should have python3 by default
 # they will not have /usr/bin/python by default
 ansible_python_interpreter: /usr/bin/python3
@@ -33,3 +33,6 @@ bind_responsible_party: me\.micahrl.com
 cluster_ifname: GANG4
 cluster_ifdevice: eth0
 
+# The "default" zone appears to be called "public",
+# and yet interfaces appear to belong to the "FedoraServer" zone?
+fedora_firewalld_zone: FedoraServer

@@ -24,9 +24,9 @@
   notify: restart named
   tags: named
 
-# - name: Allow BIND through the firewall
-#   firewalld: service=named permanent=yes state=enabled
-#   tags: named
+- name: Allow BIND through the firewall
+  firewalld: service=dns permanent=yes state=enabled zone={{ fedora_firewalld_zone }}
+  tags: named
 
 - name: Enable BIND
   systemd: name=named state=started enabled=yes
@@ -49,9 +49,9 @@
   notify: restart dhcpd
   tags: dhcpd
 
-# - name: Allow DHCPD through the firewall
-#   firewalld: service=dhcp permanent=yes state=enabled
-#   tags: dhcpd
+- name: Allow DHCPD through the firewall
+  firewalld: service=dhcp permanent=yes state=enabled zone={{ fedora_firewalld_zone }}
+  tags: dhcpd
 
 - name: Enable DHCPD
   systemd: name=dhcpd state=started enabled=yes
@@ -80,6 +80,10 @@
     - { url: "{{ fedora_armhfp_kernel }}", dest: "{{ tftp_kernel }}" }
     - { url: "{{ fedora_armhfp_initrd }}", dest: "{{ tftp_initrd }}" }
     - { url: "{{ fedora_armhfp_dtb }}", dest: "{{ tftp_dtb }}" }
+  tags: tftpd
+
+- name: Allow tftpd through the firewall
+  firewalld: service=tftp permanent=yes state=enabled zone={{ fedora_firewalld_zone }}
   tags: tftpd
 
 - name: Enable tftpd

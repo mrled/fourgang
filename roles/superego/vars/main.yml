@@ -14,4 +14,4 @@ dhcpd_known_client_max_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_known_client_max
 fedora_armhfp_images_uri: http://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/armhfp/os/images/pxeboot
 fedora_armhfp_kernel: "{{ fedora_armhfp_images_uri }}/vmlinuz"
 fedora_armhfp_initrd: "{{ fedora_armhfp_images_uri }}/initrd.img"
-fedora_armhfp_dtb: "{{ fedora_armhfp_images_uri }}/dtb/exynos5422-odroidxu4.dtb"
+fedora_armhfp_dtb: "{{ fedora_armhfp_images_uri }}/dtb/exynos5422-odroidhc1.dtb"

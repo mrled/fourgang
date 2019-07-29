@@ -13,6 +13,21 @@
 #     # - python3-policycoreutils
 #   when: ansible_distribution == 'Fedora'
 
+# Had several IPv6 problems
+# - tftp, using systemd's socket mode the way inetd might, was getting IPv6 addresses
+#   even tho client and server were configured to use ipv4
+# - BIND would sometimes (but not always?) try to contact nameservers over IPv6
+# - NTP would try to contact servers over IPv6
+# - The cockpit socket would be open on its 9090 port over IPv6, even after it was disabled by systemd (unrelated?)
+# This was a problem because the Mikrotik doesn't enable IPv6 by default
+# Also, note that there are no default IPv6 firewall rules on Mikrotk,
+# so care must be taken if we want it in the futre.
+- name: Disable IPv6
+  sysctl: name={{ item }} value=1 state=present reload=yes
+  with_items:
+    - net.ipv6.conf.all.disable_ipv6
+    - net.ipv6.conf.default.disable_ipv6
+
 - name: Set timezone
   timezone: name=US/Central
   # Restart crond per Ansible recommendation: <https://docs.ansible.com/ansible/latest/modules/timezone_module.html>
@@ -21,14 +36,20 @@
 - name: Set hostname
   hostname: name={{ inventory_hostname }}
 
+- name: Install base packages
+  package: name={{ item }} state=latest
+  with_items:
+    - tcpdump
+
 - name: Disable the Fedora Cockpit service
   systemd: name=cockpit enabled=no state=stopped
   when: ansible_distribution == 'Fedora'
 
-# - name: Block the Fedora Cockpit port
-#   firewalld: service=cockpit permanent=yes state=disabled
-#   when: ansible_distribution == 'Fedora'
+- name: Block the Fedora Cockpit port
+  firewalld: service=cockpit permanent=yes state=disabled zone={{ fedora_firewalld_zone }}
+  when: ansible_distribution == 'Fedora'
 
 - name: Ensure system is up to date
   dnf: name="*" state=latest
   when: ansible_distribution == 'Fedora' and update_system_packages
+
