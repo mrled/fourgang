@@ -200,7 +200,7 @@ The device path for my SD card:
 
 Prepare the card:
 
-	sudo fedora-arm-image-intaller --target=rpi2 --image=Fedora-Server-armhfp-30-1.2.sda.raw.xz --norootpass -resizefs --args "console=tty0 console=ttyAMA0,115200" --media="$sdcard"
+	sudo fedora-arm-image-intaller --target=rpi2 --image=Fedora-Server-armhfp-30-1.2.sda.raw.xz --norootpass --resizefs --args "console=tty0 console=ttyAMA0,115200" --media="$sdcard"
 	
 Mount the card to apply serial configuration:
 
@@ -259,3 +259,18 @@ Device configuration
 I was unable to configure the hostname here, but we can configure it later.
 
 	ssh-copy-id root@192.168.4.10
+
+the script earlier didn't seem to grow the fs?
+it DOES grow partition (see `fdisk -l`)
+but the fs still uses the original, smallest FS size.
+to grow (this can be done while the OS is booted):
+
+	xfs_growfs -d /
+
+might want to just upgrade all packages now.
+On an rpi2 this takes like 2-3 hours. Ugh.
+Also, you should definitely do this over serial - if it has to restart sshd or networking,
+or if it looses a connection somehow, you won't have a good way to monitor progress,
+even after you ssh back in.
+
+	dnf upgrade --refresh -y
