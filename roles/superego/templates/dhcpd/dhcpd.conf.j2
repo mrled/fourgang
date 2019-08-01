@@ -31,8 +31,8 @@ shared-network {{ cluster_domain }} {
         hardware ethernet {{ hostvars[host].hwaddr }};
         fixed-address {{ hostvars[host].ipv4address | ipaddr('address') }};
 	next-server {{ ipv4address | ipaddr('address') }};
-	option root-path "{{ bootp_nfs_root }}";
-	filename "{{ tftp_kernel }}";
+	# option root-path "{{ bootp_nfs_root }}";
+	filename "{{ tftp_kernel_tftp_path }}";
       }
 {% endfor %}
     }

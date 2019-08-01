@@ -13,3 +13,4 @@ It should be configured to boot over the network using servers retrieved from DH
 * U-boot Linux kernel with NFS root: https://wiki.odroid.com/troubleshooting/nfsboot
 * Official U-Boot docs for the Xu4 platform: https://gitlab.denx.de/u-boot/u-boot/blob/master/doc/README.odroid
 * using U-Boot with TFTP boot with statically configured TFTP server: https://www.linuxjournal.com/content/handy-u-boot-trick
+* guide from hardkernel, BUT NOTE, 'boot.ini' is only in their u-boot fork; I want to use upstream uboot and uEnv.txt instead https://wiki.odroid.com/odroid-xu4/application_note/software/pxe_boot

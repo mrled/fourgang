@@ -89,3 +89,28 @@
 - name: Enable tftpd
   systemd: name=tftp state=started enabled=yes
   tags: tftpd
+
+- name: Install egoboost script
+  template: src=egoboost/egoboost.py.j2 dest=/usr/local/bin/egoboost.py mode=0755 owner=root group=root
+  tags: egoboost
+
+- name: Install egoboost prereq packages
+  package: name={{ item }} state=latest
+  with_items:
+    # - arm-image-installer  # not necessary for our script, but helpful for whole FS on SD card
+    - uboot-images-armv7
+  tags: egoboost
+
+- name: Create egoboost lib directory
+  file: path={{ egoboost_lib_directory }} state=directory mode=0755 owner=root group=root
+  tags: egoboost
+
+- name: Install egoboost firmware etc
+  copy: src={{ item }} dest={{ egoboost_lib_directory }}/ mode=0644 owner=root group=root
+  with_fileglob: egoboost/*
+  tags: egoboost
+
+- name: Install ego U-Boot script script
+  template: src=egoboost/ego.uenv.txt.j2 dest={{ egoboost_lib_directory }}/ego.uenv.txt mode=0644 owner=root group=root
+  tags: egoboost
+
