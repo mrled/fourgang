@@ -51,11 +51,11 @@ Hardkernel also provides U-Boot,
 but a build of the upstream open source project works fine;
 I used the U-Boot from Fedora's `uboot-images-armv7` pacakge.
 
-Boot log: <boot-logs/20190731-1951-first-tftp-boot-log.txt>
+Boot log: <./20190731-1951-first-tftp-boot-log.txt>
 
 In that log, it tries to load the following files from TFTP:
 
-    > grep Filename docs/boot-logs/20190731-1951-first-tftp-boot-log.txt
+    > grep Filename 20190731-1951-first-tftp-boot-log.txt
     Filename '/armhfp.f30.vmlinuz'.
     Filename '/pxelinux.cfg/C0A80415'.
     Filename '/pxelinux.cfg/C0A8041'.
@@ -106,7 +106,7 @@ TODO: I really want it to just reboot and try again (maybe after waiting a minut
 OK, what happens if I get the dtb file that is being requested under dtb/ ?
 (Can retrieve it from the same Fedora mirror I get the kernel from.)
 
-<boot-logs/20190731-2228-second-tftp-boot-log.txt>
+<./20190731-2228-second-tftp-boot-log.txt>
 
 It boots more! But not by much.
 
@@ -139,7 +139,7 @@ pxelinux.cnf/default:
 
 It boots the kernel!!
 
-<boot-logs/20190802-0948-third-tftp-boot-log-kernel-boots.txt>
+<./20190802-0948-third-tftp-boot-log-kernel-boots.txt>
 
 A note about u-boot, pxelinux, and tftp:
 U-Boot can boot a kernel from TFTP directly, but can only be configured with ONE.
@@ -158,7 +158,7 @@ i think passing the ip to the kernel from U-Boot is useful for an NFS root situa
 but that's not what we're going for here.
 Let's remove it.
 
-<boot-logs/20190802-1001-fourth-tftp-boot-log-kernel-boots-emergency-mode.txt>
+<./20190802-1001-fourth-tftp-boot-log-kernel-boots-emergency-mode.txt>
 
 AW SHIT, IT BOOTS TO EMERGENCY MODE! THIS IS REALLY FUCKING GOOD NEWS.
 
