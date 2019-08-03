@@ -1,0 +1,186 @@
+
+U-Boot 2019.04 (May 04 2019 - 12:53:40 +0000) for ODROID-XU3/XU4/HC1/HC2
+
+CPU:   Exynos5422 @ 800 MHz
+DRAM:  2 GiB
+MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 2
+Loading Environment from MMC... Card did not respond to voltage select!
+*** Warning - No block device, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Model: Odroid XU3 based on EXYNOS5422
+Type:  hc1
+Net:   No ethernet found.
+Hit any key to stop autoboot:  0
+MMC Device 1 not found
+no mmc device at slot 1
+Card did not respond to voltage select!
+switch to partitions #0, OK
+mmc2 is current device
+Scanning mmc 2:1...
+starting USB...
+USB0:   USB EHCI 1.00
+USB1:   Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+USB2:   Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 1 USB Device(s) found
+scanning bus 1 for devices... cannot reset port 1!?
+1 USB Device(s) found
+scanning bus 2 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+       scanning usb for ethernet devices... 1 Ethernet Device(s) found
+Waiting for Ethernet connection... done.
+BOOTP broadcast 1
+BOOTP broadcast 2
+DHCP client bound to address 192.168.4.21 (823 ms)
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.vmlinuz'.
+Load address: 0x43e00000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ################################
+         1.3 MiB/s
+done
+Bytes transferred = 7148032 (6d1200 hex)
+missing environment variable: pxeuuid
+Retrieving file: /pxelinux.cfg/C0A80415
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A80415'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A8041
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A8041'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A804
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A804'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A80
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A80'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A8
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A8'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default-arm-exynos
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default-arm-exynos'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default-arm
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default-arm'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Config file not found
+BOOTP broadcast 1
+DHCP client bound to address 192.168.4.21 (5 ms)
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename 'boot.scr.uimg'.
+Load address: 0x50000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+BOOTP broadcast 1
+DHCP client bound to address 192.168.4.21 (4 ms)
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.vmlinuz'.
+Load address: 0x42000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ################################
+         1.3 MiB/s
+done
+Bytes transferred = 7148032 (6d1200 hex)
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename 'dtb/exynos5422-odroidhc1.dtb'.
+Load address: 0x43000000
+Loading: ####
+         869.1 KiB/s
+done
+Bytes transferred = 54344 (d448 hex)
+Card did not respond to voltage select!
+Scanning disk mmc@12200000.blk...
+Disk mmc@12200000.blk not ready
+Scanning disk mmc@12220000.blk...
+Found 2 disks
+## Starting EFI application at 42000000 ...
+

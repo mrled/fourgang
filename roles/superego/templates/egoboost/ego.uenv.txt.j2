@@ -1,3 +1,0 @@
-netretry=yes
-uenvcmdx=echo Bootstrap our brain from the hive mind; setenv netretry yes; dhcp ${kloadaddr}; tftpboot ${fdtaddr} /armhfp.f30.vmlinuz; setenv bootargs console=ttySAC2,115200n8 cpuidle.off=1 rd.driver.pre=ledtrig-heartbeat,xhci-plat-hcd no_bL_switcher; bootm ${kloadaddr} - ${fdtaddr}
-uenvcmd=run uenvcmdx

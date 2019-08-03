@@ -20,5 +20,4 @@ tftp_dir: /var/lib/tftpboot
 tftp_kernel_filename: armhfp.f30.vmlinuz
 tftp_initrd_filename: armhfp.f30.initrd
 tftp_dtb_filename: exynos5422-odroidhc1.dtb
-
-bootp_nfs_root: /var/nfsroot/default
+tftp_pxelinuxcfg_filename: default-arm

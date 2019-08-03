@@ -14,7 +14,8 @@ dhcpd_known_client_max_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_known_client_max
 tftp_kernel: "{{ tftp_dir }}/{{ tftp_kernel_filename }}"
 tftp_kernel_tftp_path: "/{{ tftp_kernel_filename }}"
 tftp_initrd: "{{ tftp_dir }}/{{ tftp_initrd_filename }}"
-tftp_dtb: "{{ tftp_dir }}/{{ tftp_dtb_filename }}"
+tftp_dtb: "{{ tftp_dir }}/dtb/{{ tftp_dtb_filename }}"
+tftp_pxelinuxcfg: "{{ tftp_dir }}/pxelinux.cfg/{{ tftp_pxelinuxcfg_filename }}"
 
 fedora_armhfp_images_uri: http://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/armhfp/os/images/pxeboot
 fedora_armhfp_kernel: "{{ fedora_armhfp_images_uri }}/vmlinuz"

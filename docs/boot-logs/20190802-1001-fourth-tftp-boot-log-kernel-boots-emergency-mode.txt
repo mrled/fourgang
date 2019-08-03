@@ -1,0 +1,1022 @@
+U-Boot 2019.04 (May 04 2019 - 12:53:40 +0000) for ODROID-XU3/XU4/HC1/HC2
+
+CPU:   Exynos5422 @ 800 MHz
+DRAM:  2 GiB
+MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 2
+Loading Environment from MMC... Card did not respond to voltage select!
+*** Warning - No block device, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Model: Odroid XU3 based on EXYNOS5422
+Type:  hc1
+Net:   No ethernet found.
+Hit any key to stop autoboot:  0
+MMC Device 1 not found
+no mmc device at slot 1
+Card did not respond to voltage select!
+switch to partitions #0, OK
+mmc2 is current device
+Scanning mmc 2:1...
+starting USB...
+USB0:   USB EHCI 1.00
+USB1:   Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+USB2:   Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 1 USB Device(s) found
+scanning bus 1 for devices... cannot reset port 1!?
+1 USB Device(s) found
+scanning bus 2 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+       scanning usb for ethernet devices... 1 Ethernet Device(s) found
+Waiting for Ethernet connection... done.
+BOOTP broadcast 1
+BOOTP broadcast 2
+DHCP client bound to address 192.168.4.21 (870 ms)
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.vmlinuz'.
+Load address: 0x43e00000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ################################
+         1.2 MiB/s
+done
+Bytes transferred = 7148032 (6d1200 hex)
+missing environment variable: pxeuuid
+Retrieving file: /pxelinux.cfg/C0A80415
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A80415'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A8041
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A8041'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A804
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A804'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A80
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A80'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A8
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A8'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default-arm-exynos
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default-arm-exynos'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default-arm
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default-arm'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default'.
+Load address: 0x51000000
+Loading: #
+         36.1 KiB/s
+done
+Bytes transferred = 644 (284 hex)
+Config file found
+FOURGANG BOOTSTRAPPER
+1:      fourgang tftp
+2:      fourgang tftp debug
+Enter choice: 2
+2:      fourgang tftp debug
+Retrieving file: /armhfp.f30.initrd
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.initrd'.
+Load address: 0x43300000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #####################################################
+         1.3 MiB/s
+done
+Bytes transferred = 58025936 (37567d0 hex)
+Retrieving file: /armhfp.f30.vmlinuz
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.vmlinuz'.
+Load address: 0x42000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ################################
+         1.3 MiB/s
+done
+Bytes transferred = 7148032 (6d1200 hex)
+append: console=console=tty1 console=ttySAC2,115200n8 cpuidle.off=1 rd.driver.pre=ledtrig-heartbeat,xhci-plat-hcd no_bL_switcher debug earlyprintk
+Retrieving file: /dtb/exynos5422-odroidhc1.dtb
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/dtb/exynos5422-odroidhc1.dtb'.
+Load address: 0x43000000
+Loading: ####
+         930.7 KiB/s
+done
+Bytes transferred = 54344 (d448 hex)
+Kernel image @ 0x42000000 [ 0x000000 - 0x6d1200 ]
+## Flattened Device Tree blob at 43000000
+   Booting using the fdt blob at 0x43000000
+   Loading Ramdisk to 4c8a9000, end 4ffff7d0 ... OK
+   Loading Device Tree to 4c898000, end 4c8a8447 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x100
+[    0.000000] Linux version 5.0.9-301.fc30.armv7hl (mockbuild@buildvm-armv7-05.arm.fedoraproject.org) (gcc version 9.0.1 20190312 (Red Hat 9.0.1-0.10) (GCC)) #1 SMP Wed Apr 24 01:39:53 UTC 2019
+[    0.000000] CPU: ARMv7 Processor [410fc073] revision 3 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Hardkernel Odroid HC1
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0xba800000
+[    0.000000] Samsung CPU ID: 0xe5422001
+[    0.000000] On node 0 totalpages: 518656
+[    0.000000]   Normal zone: 1728 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 196608 pages, LIFO batch:63
+[    0.000000]   HighMem zone: 322048 pages, LIFO batch:63
+[    0.000000] Running under secure firmware.
+[    0.000000] percpu: Embedded 16 pages/cpu @(ptrval) s35660 r8192 d21684 u65536
+[    0.000000] pcpu-alloc: s35660 r8192 d21684 u65536 alloc=16*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 516928
+[    0.000000] Kernel command line: console=console=tty1 console=ttySAC2,115200n8 cpuidle.off=1 rd.driver.pre=ledtrig-heartbeat,xhci-plat-hcd no_bL_switcher debug earlyprintk
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1915420K/2074624K available (8526K kernel code, 1315K rwdata, 4136K rodata, 2048K init, 515K bss, 93668K reserved, 65536K cma-reserved, 1222656K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9519 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1316 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 516 kB)
+[    0.000000] random: get_random_u32 called from __kmem_cache_create+0x30/0x4b0 with crng_init=0
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] ftrace: allocating 38699 entries in 76 pages
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=32 to nr_cpu_ids=8.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] GIC physical location is 0x10481000
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000000] clocksource: mct-frc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000007] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000035] genirq: irq_chip COMBINER did not update eff. affinity mask of irq 49
+[    0.007049] Console: colour dummy device 80x30
+[    0.007129] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=24000)
+[    0.007147] pid_max: default: 32768 minimum: 301
+[    0.007415] LSM: Security Framework initializing
+[    0.007432] Yama: becoming mindful.
+[    0.007461] SELinux:  Initializing.
+[    0.007742] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.007767] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.009190] CPU: Testing write buffer coherency: ok
+[    0.009785] CPU0: thread -1, cpu 0, socket 1, mpidr 80000100
+[    0.011023] Setting up static identity map for 0x40300000 - 0x403000a0
+[    0.011505] ARM CCI driver probed
+[    0.011756] Exynos MCPM support installed
+[    0.014714] rcu: Hierarchical SRCU implementation.
+[    0.021628] EFI services will not be available.
+[    0.022547] smp: Bringing up secondary CPUs ...
+[    0.023780] CPU1: thread -1, cpu 1, socket 1, mpidr 80000101
+[    0.025147] CPU2: thread -1, cpu 2, socket 1, mpidr 80000102
+[    0.026495] CPU3: thread -1, cpu 3, socket 1, mpidr 80000103
+[    0.027842] CPU4: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.027851] CPU4: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.029360] CPU5: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.029367] CPU5: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.030769] CPU6: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.030777] CPU6: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.032163] CPU7: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.032170] CPU7: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.032420] smp: Brought up 1 node, 8 CPUs
+[    0.032439] SMP: Total of 8 processors activated (384.00 BogoMIPS).
+[    0.032450] CPU: WARNING: CPU(s) started in wrong/inconsistent modes (primary CPU mode 0x1a)
+[    0.032458] CPU: This may indicate a broken bootloader or firmware.
+[    0.035722] devtmpfs: initialized
+[    0.052513] VFP support v0.3: implementor 41 architecture 4 part 30 variant f rev 0
+[    0.053133] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.053158] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.055175] pinctrl core: initialized pinctrl subsystem
+[    0.057435] DMI not present or invalid.
+[    0.058007] NET: Registered protocol family 16
+[    0.060033] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.061912] audit: initializing netlink subsys (disabled)
+[    0.062188] audit: type=2000 audit(0.057:1): state=initialized audit_enabled=0 res=1
+[    0.064059] No ATAGs?
+[    0.064467] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.064484] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.065817] Serial: AMBA PL011 UART driver
+[    0.090505] random: fast init done
+[    0.111144] EXYNOS5420 PMU initialized
+[    0.161569] cryptd: max_cpu_qlen set to 1000
+[    0.170120] vgaarb: loaded
+[    0.170821] SCSI subsystem initialized
+[    0.171176] libata version 3.00 loaded.
+[    0.171435] usbcore: registered new interface driver usbfs
+[    0.171492] usbcore: registered new interface driver hub
+[    0.171684] usbcore: registered new device driver usb
+[    0.172542] pps_core: LinuxPPS API ver. 1 registered
+[    0.172555] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.172579] PTP clock support registered
+[    0.173022] EDAC MC: Ver: 3.0.0
+[    0.175406] NetLabel: Initializing
+[    0.175420] NetLabel:  domain hash size = 128
+[    0.175431] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.175505] NetLabel:  unlabeled traffic allowed by default
+[    0.176051] clocksource: Switched to clocksource mct-frc
+[    0.299460] VFS: Disk quotas dquot_6.6.0
+[    0.299547] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.315131] NET: Registered protocol family 2
+[    0.315929] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.315968] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.316104] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.316262] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.316400] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.316446] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.316711] NET: Registered protocol family 1
+[    0.316748] NET: Registered protocol family 44
+[    0.316763] PCI: CLS 0 bytes, default 64
+[    0.317366] Unpacking initramfs...
+[    9.622082] random: crng init done
+[   22.878101] Freeing initrd memory: 56668K
+[   22.879456] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[   22.880499] hw perfevents: enabled with armv7_cortex_a15 PMU driver, 7 counters available
+[   22.964272] Initialise system trusted keyrings
+[   22.964327] Key type blacklist registered
+[   22.964586] workingset: timestamp_bits=14 max_order=19 bucket_order=5
+[   22.973488] zbud: loaded
+[   24.248619] alg: No test for 842 (842-generic)
+[   24.255063] alg: No test for 842 (842-scomp)
+[   24.460306] NET: Registered protocol family 38
+[   24.460327] Key type asymmetric registered
+[   24.460340] Asymmetric key parser 'x509' registered
+[   24.460420] bounce: pool size: 64 pages
+[   24.460481] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[   24.460784] io scheduler mq-deadline registered
+[   24.460798] io scheduler kyber registered
+[   24.461155] io scheduler bfq registered
+[   24.461797] atomic64_test: passed
+[   24.488724] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[   24.501733] Serial: AMBA driver
+[   24.502047] 12c00000.serial: ttySAC0 at MMIO 0x12c00000 (irq = 58, base_baud = 0) is a S3C6400/10
+[   24.502610] 12c10000.serial: ttySAC1 at MMIO 0x12c10000 (irq = 59, base_baud = 0) is a S3C6400/10
+[   24.503195] 12c20000.serial: ttySAC2 at MMIO 0x12c20000 (irq = 60, base_baud = 0) is a S3C6400/10
+[   25.368107] printk: console [ttySAC2] enabled
+[   25.373020] 12c30000.serial: ttySAC3 at MMIO 0x12c30000 (irq = 61, base_baud = 0) is a S3C6400/10
+[   25.383593] msm_serial: driver initialized
+[   25.386246] STMicroelectronics ASC driver initialized
+[   25.396546] libphy: Fixed MDIO Bus: probed
+[   25.400042] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   25.405736] ehci-pci: EHCI PCI platform driver
+[   25.410168] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[   25.416304] ohci-pci: OHCI PCI platform driver
+[   25.420858] usbcore: registered new interface driver usbserial_generic
+[   25.427230] usbserial: USB Serial support registered for generic
+[   25.433383] mousedev: PS/2 mouse device common for all mice
+[   25.445204] device-mapper: uevent: version 1.0.3
+[   25.448762] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[   25.458425] failed to register cpuidle driver
+[   25.462999] ledtrig-cpu: registered to indicate activity on CPUs
+[   25.468872] hidraw: raw HID events driver (C) Jiri Kosina
+[   25.473181] usbcore: registered new interface driver usbhid
+[   25.478484] usbhid: USB HID core driver
+[   25.485315] drop_monitor: Initializing network drop monitor service
+[   25.490611] Initializing XFRM netlink socket
+[   25.495196] NET: Registered protocol family 10
+[   25.520823] Segment Routing with IPv6
+[   25.523152] mip6: Mobile IPv6
+[   25.526049] NET: Registered protocol family 17
+[   25.531581] ThumbEE CPU extension supported.
+[   25.534663] Registering SWP/SWPB emulation handler
+[   25.670411] registered taskstats version 1
+[   25.673133] Loading compiled-in X.509 certificates
+[   25.944601] Loaded X.509 cert 'Fedora kernel signing key: 08af1f68c8884cdacdfdb0c046d7ac01f64b95ec'
+[   25.952314] zswap: loaded using pool lzo/zbud
+[   25.978231] Key type big_key registered
+[   26.000555] Key type encrypted registered
+[   26.003162] ima: No TPM chip found, activating TPM-bypass!
+[   26.008611] ima: Allocated hash algorithm: sha1
+[   26.013098] No architecture policies found
+[   26.080628] hctosys: unable to open rtc device (rtc0)
+[   26.115657] samsung-uart 12c20000.serial: DMA RX channel request failed, DMA will not be used
+[   26.131233] Freeing unused kernel memory: 2048K
+[   26.135719] Checked W+X mappings: passed, no W+X pages found
+[   26.139958] rodata_test: test data was not read only
+[   26.144895] Run /init as init process
+[   26.185635] systemd[1]: System time before build time, advancing clock.
+[   26.208201] systemd[1]: systemd v241-7.gita2eaa1c.fc30 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[   26.229853] systemd[1]: No virtualization found in DMI
+[   26.234801] systemd[1]: No virtualization found in CPUID
+[   26.240205] systemd[1]: Virtualization XEN not found, /proc/xen does not exist
+[   26.247509] systemd[1]: No virtualization found in /proc/device-tree/*
+[   26.254260] systemd[1]: UML virtualization not found in /proc/cpuinfo.
+[   26.260327] systemd[1]: This platform does not support /proc/sysinfo
+[   26.266593] systemd[1]: Found VM virtualization none
+[   26.271540] systemd[1]: Detected architecture arm.
+[   26.276300] systemd[1]: Running in initial RAM disk.
+
+Welcome to Fedora 30 (Thirty) dracut-049-26.git20181204.fc30 (Initramfs)!
+
+[   26.403426] systemd-fstab-generator[261]: Could not find a root= entry on the kernel command line.
+[   26.407970] systemd-gpt-auto-generator[262]: Not a EFI boot, not creating root mount.
+[   26.411079] systemd-fstab-generator[261]: Parsing /etc/fstab
+[   26.424589] systemd-fstab-generator[261]: Parsing /sysroot/etc/fstab
+[  OK  ] Reached target Initrd Root Device.
+[  OK  ] Reached target Swap.
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket.
+         Starting Setup Virtual Console...
+         Starting Apply Kernel Variables...
+         Starting Create list of re…odes for the current kernel...
+[  OK  ] Listening on Journal Audit Socket.
+         Starting Journal Service...
+[   26.764251] systemd[312]: Operating on architecture: arm
+[  OK  ] Listening on udev Kernel Socket.
+[   26.777515] systemd[312]: Operating on architecture: arm
+[   26.782264] systemd[312]: Operating on architecture: arm
+[   26.787474] systemd[312]: Restricting namespace to: .
+[   26.792149] systemd[312]: Operating on architecture: arm
+[   26.797553] systemd[312]: Blocking cgroup.
+[   26.801538] systemd[312]: Blocking ipc.
+[   26.805331] systemd[312]: Blocking net.
+[   26.809138] systemd[312]: Blocking mnt.
+[   26.812963] systemd[312]: Blocking pid.
+[   26.816776] systemd[312]: Blocking user.
+[   26.820711] systemd[312]: Blocking uts.
+[   26.824918] systemd[312]: Operating on architecture: arm
+[  OK  ] Reached target Slices.
+[  OK  ] Started Setup Virtual Console.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Create list of req… nodes for the current kernel.
+         Starting Create Static Device Nodes in /dev...
+         Starting dracut cmdline hook...
+[  OK  ] Started Create Static Device Nodes in /dev.
+[   26.997118] systemd-journald[312]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+[   27.010350] systemd-journald[312]: Journal effective settings seal=no compress=yes compress_threshold_bytes=512B
+[   27.019369] systemd-journald[312]: Fixed min_use=1.0M max_use=99.5M max_size=12.4M min_size=512.0K keep_free=149.3M n_max_files=100
+[   27.049315] systemd-journald[312]: Reserving 22663 entries in hash table.
+[   27.056338] systemd-journald[312]: Vacuuming...
+[   27.059578] systemd-journald[312]: Vacuuming done, freed 0B of archived journals from /run/log/journal/a23b739a0f3e48498d8c8e88dde1672c.
+[   27.071703] systemd-journald[312]: Flushing /dev/kmsg...
+[   27.080172] systemd-journald[312]: Compressed data object 537 -> 335 using LZ4
+[   27.108949] systemd-journald[312]: systemd-journald running as pid 312
+[   27.115679] systemd-journald[312]: Sent READY=1 notification.
+[  OK  ] Started Journal Service.
+[   27.129562] audit: type=1130 audit(1555082265.943:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   28.950407] Loading iSCSI transport class v2.0-870.
+[   28.990246] iscsi: registered transport (tcp)
+[   29.063447] iscsi: registered transport (qla4xxx)
+[   29.066784] QLogic iSCSI HBA Driver
+[   29.096047] libcxgbi:libcxgbi_init_module: Chelsio iSCSI driver library libcxgbi v0.9.1-ko (Apr. 2015)
+[   29.160407] Chelsio T3 iSCSI Driver cxgb3i v2.0.1-ko (Apr. 2015)
+[   29.165094] iscsi: registered transport (cxgb3i)
+[   29.264797] Chelsio T4-T6 iSCSI Driver cxgb4i v0.9.5-ko (Apr. 2015)
+[   29.269717] iscsi: registered transport (cxgb4i)
+[   29.274247] cxgb4i:cxgb4i_init_module: cxgb4i dcb enabled.
+[   29.307511] cnic: QLogic cnicDriver v2.5.22 (July 20, 2015)
+[   29.328733] QLogic NetXtreme II iSCSI Driver bnx2i v2.7.10.1 (Jul 16, 2014)
+[   29.334341] iscsi: registered transport (bnx2i)
+[   29.369214] iscsi: registered transport (be2iscsi)
+[   29.372571] In beiscsi_module_init, tt=3112b649
+[  OK  ] Started dracut cmdline hook.
+[   29.669285] audit: type=1130 audit(1555082268.483:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-cmdline comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+         Starting dracut pre-udev hook...
+[   29.945302] dracut-pre-udev[571]: cramfs was loaded
+[   29.993490] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   30.025818] dracut-pre-udev[571]: squashfs was loaded
+[   30.068241] dracut-pre-udev[571]: iscsi_tcp was loaded
+[   30.077526] dracut-pre-udev[571]: modprobe: FATAL: Module floppy not found in directory /lib/modules/5.0.9-301.fc30.armv7hl
+[   30.109978] dracut-pre-udev[571]: floppy was NOT loaded
+[   30.118604] dracut-pre-udev[571]: modprobe: FATAL: Module edd not found in directory /lib/modules/5.0.9-301.fc30.armv7hl
+[   30.151926] dracut-pre-udev[571]: edd was NOT loaded
+[   30.160396] dracut-pre-udev[571]: modprobe: FATAL: Module iscsi_ibft not found in directory /lib/modules/5.0.9-301.fc30.armv7hl
+[   30.193670] dracut-pre-udev[571]: iscsi_ibft was NOT loaded
+[   30.245718] dracut-pre-udev[571]: raid0 was loaded
+[   30.303241] dracut-pre-udev[571]: raid1 was loaded
+[   30.381675] raid6: using algorithm neonx8 gen() 0 MB/s
+[   30.385377] raid6: .... xor() 0 MB/s, rmw enabled
+[   30.390081] raid6: using neon recovery algorithm
+[   30.408962] xor: measuring software checksum speed
+[   30.422008]    arm4regs  :  1456.000 MB/sec
+[   30.434008]    8regs     :  1188.000 MB/sec
+[   30.446012]    32regs    :  1132.000 MB/sec
+[   30.458006]    neon      :  1100.000 MB/sec
+[   30.460750] xor: using function: arm4regs (1456.000 MB/sec)
+[   30.473618] async_tx: api initialized (async)
+[   30.571383] dracut-pre-udev[571]: raid5 was loaded
+[   30.609499] dracut-pre-udev[571]: raid6 was loaded
+[   30.647567] dracut-pre-udev[571]: raid456 was loaded
+[   30.705929] dracut-pre-udev[571]: raid10 was loaded
+[   30.749997] dracut-pre-udev[571]: linear was loaded
+[   30.787857] dracut-pre-udev[571]: dm-mod was loaded
+[   30.830420] dracut-pre-udev[571]: dm-zero was loaded
+[   30.872313] dracut-pre-udev[571]: dm-mirror was loaded
+[   30.913796] dracut-pre-udev[571]: dm-snapshot was loaded
+[   30.964809] dracut-pre-udev[571]: dm-multipath was loaded
+[   30.986211] device-mapper: multipath round-robin: version 1.2.0 loaded
+[   31.015415] dracut-pre-udev[571]: dm-round-robin was loaded
+[   31.067339] dracut-pre-udev[571]: dm-crypt was loaded
+[   31.105221] dracut-pre-udev[571]: cbc was loaded
+[   31.113522] dracut-pre-udev[571]: modprobe: FATAL: Module sha256 not found in directory /lib/modules/5.0.9-301.fc30.armv7hl
+[   31.142985] dracut-pre-udev[571]: sha256 was NOT loaded
+[   31.193715] dracut-pre-udev[571]: lrw was loaded
+[   31.235620] dracut-pre-udev[571]: xts was loaded
+[   31.374105] RPC: Registered named UNIX socket transport module.
+[   31.378587] RPC: Registered udp transport module.
+[   31.383309] RPC: Registered tcp transport module.
+[   31.387965] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[  OK  ] Started dracut pre-udev hook.
+[   32.090341] audit: type=1130 audit(1555082270.904:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-udev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   32.104053] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+         Starting udev Kernel Device Manager...
+[  OK  ] Started udev Kernel Device Manager.
+[   32.325610] audit: type=1130 audit(1555082271.134:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   32.334442] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+         Starting d[   32.355260] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+racut pre-trigger hook...
+[   33.213254] dracut-pre-trigger[758]: /tmp/dd_disk file was not created
+[  OK  ] Started dracut pre-trigger hook.
+[   33.303319] audit: type=1130 audit(1555082272.117:6): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   33.316057] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+         Starting udev Coldplug all Devices...
+[   33.602713] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+         Mounting Kernel Configuration File System...
+[   33.756662] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+[  OK  ] Mounted Kernel Configuration File System.
+[  OK  ] Started udev Coldplug all Devices.
+[   34.020412] audit: type=1130 audit(1555082272.834:7): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   34.069077] alg: No test for stdrng (exynos_rng)
+[   34.107698] exynos5_usb3drd_phy 12100000.phy: 12100000.phy supply vbus not found, using dummy regulator
+[   34.115773] s5p-secss 10830000.sss: s5p-sss driver registered
+[   34.123926] ehci-exynos: EHCI EXYNOS driver
+[   34.127415] exynos5_usb3drd_phy 12100000.phy: Linked as a consumer to regulator.0
+[   34.134736] exynos5_usb3drd_phy 12100000.phy: 12100000.phy supply vbus-boost not found, using dummy regulator
+[   34.139854] samsung-usb2-phy 12130000.phy: 12130000.phy supply vbus not found, using dummy regulator
+[   34.149135] exynos5_usb3drd_phy 12500000.phy: 12500000.phy supply vbus not found, using dummy regulator
+[   34.153230] samsung-usb2-phy 12130000.phy: Linked as a consumer to regulator.0
+[   34.169679] exynos5_usb3drd_phy 12500000.phy: Linked as a consumer to regulator.0
+[   34.169894] ohci-exynos: OHCI EXYNOS driver
+[   34.177153] exynos5_usb3drd_phy 12500000.phy: 12500000.phy supply vbus-boost not found, using dummy regulator
+[   34.179470] Synopsys Designware Multimedia Card Interface Driver
+[   34.181878] exynos-ohci 12120000.usb: USB Host Controller
+[   34.183952] exynos-ehci 12110000.usb: EHCI Host Controller
+[   34.184965] exynos-ehci 12110000.usb: new USB bus registered, assigned bus number 1
+[   34.216315] exynos-ohci 12120000.usb: new USB bus registered, assigned bus number 2
+[   34.221080] exynos-ehci 12110000.usb: irq 84, io mem 0x12110000
+[   34.221871] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[   34.242108] exynos-ehci 12110000.usb: USB 2.0 started, EHCI 1.00
+[   34.250433] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.00
+[   34.257264] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   34.264498] usb usb1: Product: EHCI Host Controller
+[   34.269310] usb usb1: Manufacturer: Linux 5.0.9-301.fc30.armv7hl ehci_hcd
+[   34.276123] usb usb1: SerialNumber: 12110000.usb
+[   34.282148] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[   34.282877] exynos-ohci 12120000.usb: irq 84, io mem 0x12120000
+[   34.287220] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[   34.298968] hub 1-0:1.0: USB hub found
+[   34.302271] hub 1-0:1.0: 3 ports detected
+[   34.308682] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 86,64 bit host data width,64 deep fifo
+[   34.327154] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[   34.339786] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[   34.344938] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[   34.349472] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.00
+[   34.350254] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 86,64 bit host data width,64 deep fifo
+[   34.358412] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   34.358425] usb usb2: Product: USB Host Controller
+[   34.379634] usb usb2: Manufacturer: Linux 5.0.9-301.fc30.armv7hl ohci_hcd
+[   34.386408] usb usb2: SerialNumber: 12120000.usb
+[   34.391771] hub 2-0:1.0: USB hub found
+[   34.394788] hub 2-0:1.0: 3 ports detected
+[   34.406054] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[   34.412902] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[   34.417349] iommu: Adding device 11c00000.rotator to group 0
+[   34.417938] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[   34.425739] exynos-rotator 11c00000.rotator: Linked as a consumer to 11d40000.sysmmu
+[   34.428930] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 86,64 bit host data width,64 deep fifo
+[   34.445796] iommu: Adding device 12800000.scaler to group 1
+[   34.453099] exynos-scaler 12800000.scaler: Linked as a consumer to 12880000.sysmmu
+[   34.463845] exynos-scaler 12800000.scaler: Linked as a consumer to 128c0000.sysmmu
+[   34.466474] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[   34.474531] dma-pl330 121a0000.pdma: Loaded driver for PL330 DMAC-241330
+[   34.478858] iommu: Adding device 12810000.scaler to group 2
+[   34.483521] dma-pl330 121a0000.pdma:         DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[   34.497607] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[   34.498196] exynos-scaler 12810000.scaler: Linked as a consumer to 12890000.sysmmu
+[   34.503813] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[   34.511427] exynos-scaler 12810000.scaler: Linked as a consumer to 128d0000.sysmmu
+[   34.516740] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 86,64 bit host data width,64 deep fifo
+[   34.528499] dma-pl330 121b0000.pdma: Loaded driver for PL330 DMAC-241330
+[   34.529271] iommu: Adding device 12820000.scaler to group 3
+[   34.531507] exynos-scaler 12820000.scaler: Linked as a consumer to 128a0000.sysmmu
+[   34.531541] exynos-scaler 12820000.scaler: Linked as a consumer to 128e0000.sysmmu
+[   34.542679] iommu: Adding device 13e00000.video-scaler to group 4
+[   34.545712] dma-pl330 121b0000.pdma:         DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[   34.545922] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[   34.554391] exynos-drm-gsc 13e00000.video-scaler: Linked as a consumer to 13e80000.sysmmu
+[   34.591179] exynos-drm-gsc 13e00000.video-scaler: drm gsc registered successfully.
+[   34.591376] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[   34.592567] dma-pl330 10800000.mdma: Loaded driver for PL330 DMAC-241330
+[   34.592582] dma-pl330 10800000.mdma:         DBUFF-64x8bytes Num_Chans-8 Num_Peri-1 Num_Events-32
+[   34.598925] iommu: Adding device 13e10000.video-scaler to group 5
+[   34.604210] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[   34.611291] exynos-drm-gsc 13e10000.video-scaler: Linked as a consumer to 13e90000.sysmmu
+[   34.619087] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 86,64 bit host data width,64 deep fifo
+[   34.625541] exynos-drm-gsc 13e10000.video-scaler: drm gsc registered successfully.
+[   34.641477] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[   34.656076] exynos-drm exynos-drm: bound exynos-drm-vidi (ops vidi_component_ops [exynosdrm])
+[   34.658244] s2mps11-clk s2mps11-clk: DMA mask not set
+[   34.672797] s5m-rtc s2mps14-rtc: registered as rtc0
+[   34.675889] [drm] Exynos DRM: using 11c00000.rotator device for DMA mapping operations
+[   34.676600] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[   34.676620] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[   34.676661] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 86,64 bit host data width,64 deep fifo
+[   34.683822] s3c-rtc 101e0000.rtc: rtc disabled, re-enabling
+[   34.688725] exynos-rotator 11c00000.rotator: The exynos rotator has been probed successfully
+[   34.695129] rtc rtc1: invalid alarm value: 1900-01-03T00:00:00
+[   34.700474] exynos-drm exynos-drm: bound 11c00000.rotator (ops rotator_component_ops [exynosdrm])
+[   34.709846] s3c-rtc 101e0000.rtc: registered as rtc1
+[   34.715225] exynos-scaler 12800000.scaler: The exynos scaler has been probed successfully
+[   34.716745] vddq_mmc2: Bringing 3300000uV into 2800000-2800000uV
+[   34.725677] exynos-dwc3 soc:usb3-0: Linked as a consumer to regulator.9
+[   34.729529] exynos-drm exynos-drm: bound 12800000.scaler (ops scaler_component_ops [exynosdrm])
+[   34.729620] exynos-scaler 12810000.scaler: The exynos scaler has been probed successfully
+[   34.741683] exynos-dwc3 soc:usb3-0: Linked as a consumer to regulator.11
+[   34.743269] exynos-drm exynos-drm: bound 12810000.scaler (ops scaler_component_ops [exynosdrm])
+[   34.753951] vdd_sd: Bringing 3300000uV into 2800000-2800000uV
+[   34.755855] exynos-dwc3 soc:usb3-1: Linked as a consumer to regulator.9
+[   34.756589] exynos-dwc3 soc:usb3-1: Linked as a consumer to regulator.11
+[   34.757279] exynos-scaler 12820000.scaler: The exynos scaler has been probed successfully
+[   34.759186] dwmmc_exynos 12220000.mmc: IDMAC supports 32-bit address mode.
+[   34.766763] dwmmc_exynos 12220000.mmc: Using internal DMA controller.
+[   34.772641] exynos-drm exynos-drm: bound 12820000.scaler (ops scaler_component_ops [exynosdrm])
+[   34.780635] dwmmc_exynos 12220000.mmc: Version ID is 250a
+[   34.780674] dwmmc_exynos 12220000.mmc: DW MMC controller at irq 86,64 bit host data width,64 deep fifo
+[   34.787406] exynos-drm-gsc 13e00000.video-scaler: The exynos gscaler has been probed successfully
+[   34.796234] dwmmc_exynos 12220000.mmc: Linked as a consumer to regulator.19
+[   34.801770] exynos-drm exynos-drm: bound 13e00000.video-scaler (ops gsc_component_ops [exynosdrm])
+[   34.806504] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+[   34.808438] dwmmc_exynos 12220000.mmc: Linked as a consumer to regulator.13
+[   34.815347] exynos-drm-gsc 13e10000.video-scaler: The exynos gscaler has been probed successfully
+[   34.841390] dwc3 12000000.dwc3: Failed to get clk 'ref': -2
+[   34.845120] exynos-drm exynos-drm: bound 13e10000.video-scaler (ops gsc_component_ops [exynosdrm])
+[   34.845784] mmc_host mmc0: Bus speed (slot 0) = 50000000Hz (slot req 400000Hz, actual 396825HZ div = 63)
+[   34.853139] xhci-hcd xhci-hcd.3.auto: xHCI Host Controller
+[   34.859659] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[   34.859671] [drm] No driver support for vblank timestamp query.
+[   34.860387] exynos-tmu 10060000.tmu: Linked as a consumer to regulator.7
+[   34.863414] exynos-tmu 10064000.tmu: Linked as a consumer to regulator.7
+[   34.865471] exynos-tmu 10068000.tmu: Linked as a consumer to regulator.7
+[   34.867639] exynos-tmu 1006c000.tmu: Linked as a consumer to regulator.7
+[   34.868819] xhci-hcd xhci-hcd.3.auto: new USB bus registered, assigned bus number 3
+[   34.870632] exynos-tmu 100a0000.tmu: Linked as a consumer to regulator.7
+[   34.875480] [drm] Cannot find any crtc or sizes
+[   34.885131] xhci-hcd xhci-hcd.3.auto: hcc params 0x0220f04c hci version 0x100 quirks 0x0000000002010010
+[   34.893556] [drm] Cannot find any crtc or sizes
+[   34.900433] xhci-hcd xhci-hcd.3.auto: irq 146, io mem 0x12000000
+[   34.909558] [drm] Initialized exynos 1.1.0 20180330 for exynos-drm on minor 0
+[   34.915245] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.00
+[   34.917937] mmc_host mmc0: Bus speed (slot 0) = 200000000Hz (slot req 200000000Hz, actual 200000000HZ div = 0)
+[   34.918969] mmc0: new ultra high speed SDR104 SDHC card at address 5048
+[   34.961809] mmcblk0: mmc0:5048 SD32G 29.0 GiB
+[   34.964034] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   34.964048] usb usb3: Product: xHCI Host Controller
+[   34.975395]  mmcblk0: p1
+[   34.977336] usb usb3: Manufacturer: Linux 5.0.9-301.fc30.armv7hl xhci-hcd
+[   34.977345] usb usb3: SerialNumber: xhci-hcd.3.auto
+[   35.079405] hub 3-0:1.0: USB hub found
+[   35.082396] hub 3-0:1.0: 1 port detected
+[   35.086933] xhci-hcd xhci-hcd.3.auto: xHCI Host Controller
+[   35.092103] xhci-hcd xhci-hcd.3.auto: new USB bus registered, assigned bus number 4
+[   35.099199] xhci-hcd xhci-hcd.3.auto: Host supports USB 3.0  SuperSpeed
+[   35.105921] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[   35.114271] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.00
+[   35.122070] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   35.129265] usb usb4: Product: xHCI Host Controller
+[   35.134114] usb usb4: Manufacturer: Linux 5.0.9-301.fc30.armv7hl xhci-hcd
+[   35.140870] usb usb4: SerialNumber: xhci-hcd.3.auto
+[   35.146535] hub 4-0:1.0: USB hub found
+[   35.149485] hub 4-0:1.0: 1 port detected
+         [   35.154531] dwc3 12400000.dwc3: Failed to get clk 'ref': -2
+Starting    35.161821] xhci-hcd xhci-hcd.4.auto: xHCI Host Controller
+[   35.166734] xhci-hcd xhci-hcd.4.auto: new USB bus registered, assigned bus number 5
+[   35.174399] xhci-hcd xhci-hcd.4.auto: hcc params 0x0220f04c hci version 0x100 quirks 0x0000000002010010
+[   35.183388] xhci-hcd xhci-hcd.4.auto: irq 147, io mem 0x12400000
+[   35.190046] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.00
+[   35.197530] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   35.204737] usb usb5: Product: xHCI Host Controller
+[   35.209588] usb usb5: Manufacturer: Linux 5.0.9-301.fc30.armv7hl xhci-hcd
+[   35.216346] usb usb5: SerialNumber: xhci-hcd.4.auto
+[   35.221870] hub 5-0:1.0: USB hub found
+[   35.225033] hub 5-0:1.0: 1 port detected
+[   35.229455] xhci-hcd xhci-hcd.4.auto: xHCI Host Controller
+[   35.234573] xhci-hcd xhci-hcd.4.auto: new USB bus registered, assigned bus number 6
+[   35.241915] xhci-hcd xhci-hcd.4.auto: Host supports USB 3.0  SuperSpeed
+[   35.248623] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[   35.256801] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.00
+[   35.264805] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   35.272027] usb usb6: Product: xHCI Host Controller
+[   35.276826] usb usb6: Manufacturer: Linux 5.0.9-301.fc30.armv7hl xhci-hcd
+[   35.283584] usb usb6: SerialNumber: xhci-hcd.4.auto
+[   35.289314] hub 6-0:1.0: USB hub found
+[   35.292205] hub 6-0:1.0: 1 port detected
+;39mudev Wait for Complete Device Initialization...
+         Starting Show Plymouth Boot Screen...
+[   35.317443] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+         Starting dracut initqueue hook...
+[   35.341678] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+[   35.351469] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+[  OK     35.423800] audit: type=1130 audit(1555082274.237:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+0m] Started Show Plymouth Boot Screen.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Reached target Paths.
+[  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
+[   35.550605] dracut-initqueu[   35.559046] usb 5-1: new high-speed USB device number 2 using xhci-hcd
+e[887]: Bus n/a: changing state UNSET → OPENING
+[   35.551330] dracut-initqueue[887]: Bus n/a: changing state OPENING → AUTHENTICATING
+[   35.567435] dracut-initqueue[887]: Bus n/a: changing state AUTHENTICATING → RUNNING
+[   35.567865] dracut-initqueue[887]: Sent message type=method_call sender=n/a destination=org.freedesktop.systemd1 path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=Reload cookie=1 reply_cookie=0 signature=n/a error-name=n/a error-message=n/a
+[   35.680297] systemd-gpt-auto-generator[910]: Not a EFI boot, not creating root mount.
+[   35.691368] usb 5-1: New USB device found, idVendor=0bda, idProduct=8153, bcdDevice=30.00
+[   35.693118] systemd-fstab-generator[909]: Could not find a root= entry on the kernel command line.
+[   35.698134] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=6
+[   35.708156] systemd-fstab-generator[909]: Parsing /etc/fstab
+[   35.714137] usb 5-1: Product: USB 10/100/1000 LAN
+[   35.714151] usb 5-1: Manufacturer: Realtek
+[   35.714165] usb 5-1: SerialNumber: 000001000000
+[   35.733439] systemd-fstab-generator[909]: Parsing /sysroot/etc/fstab
+[   35.802732] usbcore: registered new interface driver r8152
+[   35.834368] usbcore: registered new interface driver cdc_ether
+[   35.968844] usb 5-1: reset high-speed USB device number 2 using xhci-hcd
+[   36.151246] usb 4-1: new SuperSpeed Gen 1 USB device number 2 using xhci-hcd
+[   36.159594] r8152 5-1:1.0 eth0: v1.09.9
+[   36.169666] usb 4-1: New USB device found, idVendor=152d, idProduct=0578, bcdDevice=31.01
+[   36.176411] usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   36.183541] usb 4-1: Product: USB to SATA bridge
+[   36.188136] usb 4-1: Manufacturer: JMicron
+[   36.192166] usb 4-1: SerialNumber: DB00000000013B
+[   36.236473] usbcore: registered new interface driver usb-storage
+[   36.242638] dracut-initqueue[887]: Got message type=method_return sender=org.freedesktop.systemd1 destination=n/a path=n/a interface=n/a member=n/a cookie=360 reply_cookie=1 signature=n/a error-name=n/a error-message=n/a
+[   36.243352] dracut-initqueue[887]: Bus n/a: changing state RUNNING → CLOSED
+[   36.288596] scsi host0: uas
+[   36.290807] usbcore: registered new interface driver uas
+[   36.292236] scsi 0:0:0:0: Direct-Access     JMicron                   3101 PQ: 0 ANSI: 6
+[   36.306854] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[   36.312139] sd 0:0:0:0: [sda] 468862128 512-byte logical blocks: (240 GB/224 GiB)
+[   36.318285] sd 0:0:0:0: [sda] 4096-byte physical blocks
+[   36.323668] sd 0:0:0:0: [sda] Write Protect is off
+[   36.328171] sd 0:0:0:0: [sda] Mode Sense: 53 00 00 08
+[   36.336172] dma-pl330 3880000.adma: Loaded driver for PL330 DMAC-241330
+[   36.338623] sd 0:0:0:0: [sda] Disabling FUA
+[   36.341359] dma-pl330 3880000.adma:  DBUFF-4x8bytes Num_Chans-6 Num_Peri-16 Num_Events-6
+[   36.353578] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[   36.363252] sd 0:0:0:0: [sda] Optimal transfer size 33553920 bytes not a multiple of physical block size (4096 bytes)
+[   36.366106] dma-pl330 3880000.adma: PM domain MAU will not be powered off
+[   36.873037] sd 0:0:0:0: [sda] Attached SCSI disk
+[  OK     37.116876] audit: type=1130 audit(1555082275.930:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   37.133754] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+0m] Started udev Wait for Complete Device Initialization.
+         St[   37.152780] audit: type=1130 audit(1555082275.966:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=multipathd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   37.156383] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+arting Device-Mapper Multipath Device Controller...
+[  OK  ] Started Device-Mapper Multipath Device Controller.
+[  OK  ] Reached t[   37.196084] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+arget Local File Systems (Pre).
+[  OK  ] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+[  OK     37.289781] audit: type=1130 audit(1555082276.103:11): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+0m] Started Create Volatile Files and Directories.
+[  OK  ] Reached target System Initialization.
+[  OK   systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+[0m] Listening on Open-iSCSI iscsiuio Socket   37.337640] audit: type=1130 audit(1555082276.151:12): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=iscsiuio comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   37.353463] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+m.
+         Starting iSCSI UserSpace I/O driver...
+[  OK  ] Listening on Open-iSCSI iscsid Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started iSCSI [   37.391414] audit: type=1130 audit(1555082276.205:13): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=iscsid comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+UserSpace I/O driver.
+         Starting Open-iSCSI...
+[  OK  ] Started Open-iSCSI.
+[  123.082687] systemd-journald[312]: Sent WATCHDOG=1 notification.
+[  198.193563] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  198.932787] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  199.598476] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  200.263082] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  200.931628] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  201.595964] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  202.263618] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  202.927122] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  203.593308] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  204.256971] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  204.924181] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  205.588858] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  206.256478] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  206.921984] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  207.201037] systemd-journald[312]: Sent WATCHDOG=1 notification.
+[  207.589525] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  208.254107] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  208.920453] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  209.584071] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  210.251389] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  210.914787] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  211.581296] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  212.245122] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  212.912412] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  213.574197] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  214.241578] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  214.905991] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  215.574355] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  216.240071] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  216.906459] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  217.572221] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  218.240518] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  218.904953] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  219.572465] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  220.238793] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  220.904363] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  221.567792] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  222.235540] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  222.899936] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  223.569539] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  224.233189] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  224.900574] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  225.566107] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  226.233179] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  226.895146] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  227.562325] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  228.225881] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  228.894550] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  229.561973] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  230.228470] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  230.892095] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  231.558379] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  232.223244] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  232.888375] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  233.552916] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  234.220410] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  234.883979] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  235.550457] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  236.214327] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  236.881466] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  237.546073] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  238.213655] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  238.876999] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  239.544407] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  240.208947] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  240.876551] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  241.540758] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  242.207250] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  242.871978] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  243.540332] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  244.205233] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  244.872472] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  245.536104] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  246.202440] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  246.865951] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  247.535461] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  248.201200] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  248.869366] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  249.534124] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  250.200388] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  250.865161] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  251.532354] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  252.199732] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  252.867554] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  253.531880] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  254.199586] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  254.864887] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  255.531399] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  256.196997] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  256.863316] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  257.527925] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  258.195332] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  258.860977] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  259.528399] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  260.194002] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  260.860501] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  261.522980] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  262.191458] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  262.857909] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  263.524431] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  264.189135] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  264.857515] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  265.523209] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  266.191227] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  266.854197] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  267.521423] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  268.185120] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  268.853625] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  269.518067] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  270.184592] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  270.846220] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  271.513514] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  272.175067] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  272.838352] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  273.504076] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  274.172630] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  274.836998] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  275.504376] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  276.170124] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  276.838455] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  277.504220] dracut-initqueue[887]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  277.505804] dracut-initqueue[887]: Warning: Could not boot.
+[  277.584406] dracut-initqueue[887]: Bus n/a: changing state UNSET → OPENING
+[  277.585184] dracut-initqueue[887]: Bus n/a: changing state OPENING → AUTHENTICATING
+[  277.585613] dracut-initqueue[887]: Executing dbus call org.freedesktop.systemd1.Manager StartUnit(dracut-emergency.service, replace)
+[  277.597319] dracut-initqueue[887]: Bus n/a: changing state AUTHENTICATING → RUNNING
+[  277.597749] dracut-initqueue[887]: Sent message type=method_call sender=n/a destination[  277.632589] systemd-journald[312]: Successfully sent stream file descriptor to service manager.
+=org.freedesktop.systemd1 path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=StartUnit cookie=1 reply_cookie=0 signature=ss error-name=n/a error-message=n/a
+[  277.604795] dracut-initqueue[887]: Got message type=method_return sender=org.freedesktop.systemd1 destination=n/a path=n/a interface=n/a member=[  277.670663] audit: type=1130 audit(1555082516.484:14): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  277.690131] audit: type=1131 audit(1555082516.484:15): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+n/a cookie=3 reply_cookie=1 signature=o error-name=n/a error-message=n/a
+[  277.605333] dracut-initqueue[887]: Sent message type=method_call sender=n/a destination=org.freedesktop.systemd1 path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=GetUnit cookie=2 reply_cookie=0 signature=s error-name=n/a error-message=n/a
+[  277.606141] dracut-initqueue[887]: Got message type=method_return sender=org.freedesktop.systemd1 destination=n/a path=n/a interface=n/a member=n/a cookie=7 reply_cookie=2 signature=o error-name=n/a error-message=n/a
+[  277.606568] dracut-initqueue[887]: Sent message type=method_call sender=n/a destination=org.freedesktop.systemd1 path=/org/freedesktop/systemd1/unit/dracut_2demergency_2eservice interface=org.freedesktop.DBus.Properties member=Get cookie=3 reply_cookie=0 signature=ss error-name=n/a error-message=n/a
+         Starting Setup Virtual Console...
+[  277.616965] dracut-initqueue[887]: Got message type=method_return sender=org.freedesktop.systemd1 destination=n/a path=n/a interface=n/a member=n/a cookie=13 reply_cookie=3 signature=v error-name=n/a error-message=n/a
+[  277.617510] dracut-initqueue[887]: Adding /org/freedesktop/systemd1/job/59 to the set
+[  277.617969] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=UnitNew cookie=1 reply_cookie=0 signature=so error-name=n/a error-message=n/a
+[  277.618483] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=JobNew cookie=2 reply_cookie=0 signature=uos error-name=n/a error-message=n/a
+[  277.618959] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=4 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.619513] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=5 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.619970] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=JobNew cookie=6 reply_cookie=0 signature=uos error-name=n/a error-message=n/a
+[  277.620602] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=8 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.623431] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=9 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.624158] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=10 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.624878] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=11 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.625550] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/job/62 interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=12 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  OK  ] Started Setup Virtual Console.
+[  277.664867] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=14 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+         Starting Dracut Emergency Shell...[  277.684714]
+dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=15 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.705092] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=JobRemoved cookie=16 reply_cookie=0 signature=uoss error-name=n/a error-message=n/a
+[  277.706995] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=17 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.707676] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/systemd_2dvconsole_2dsetup_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=18 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.708208] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/dracut_2demergency_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=19 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.708646] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/dracut_2demergency_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=20 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.709146] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/dracut_2demergency_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=21 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.709551] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/dracut_2demergency_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=22 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  277.710134] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/job/59 interface=org.freedesktop.DBus.Properties member=PropertiesChang[  278.364333] audit: type=1131 audit(1555082517.178:16): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+ed cookie=23 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  278.361547] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/plymouth_2dstart_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=24 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+[  278.378325] dracut-initqueue[887]: Got message type=signal sender=org.freedesktop.systemd1 destination=n/a path=/org/freedesktop/systemd1/unit/plymouth_2dstart_2eservice interface=org.freedesktop.DBus.Properties member=PropertiesChanged cookie=25 reply_cookie=0 signature=sa{sv}as error-name=n/a error-message=n/a
+Warning: /dev/root does not exist
+
+Generating "/run/initramfs/rdsosreport.txt"
+
+
+Entering emergency mode. Exit the shell to continue.
+Type "journalctl" to view system logs.
+You might want to save "/run/initramfs/rdsosreport.txt" to a USB stick or /boot
+after mounting them and attach it to a bug report.
+
+
+dracut:/# [  314.200913] systemd-journald[312]: Sent WATCHDOG=1 notification.
+
+dracut:/# echo OMG IT WORKS
+OMG IT WORKS
+dracut:/#

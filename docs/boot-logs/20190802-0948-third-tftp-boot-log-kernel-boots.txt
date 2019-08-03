@@ -1,0 +1,546 @@
+
+U-Boot 2019.04 (May 04 2019 - 12:53:40 +0000) for ODROID-XU3/XU4/HC1/HC2
+
+CPU:   Exynos5422 @ 800 MHz
+DRAM:  2 GiB
+MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 2
+Loading Environment from MMC... Card did not respond to voltage select!
+*** Warning - No block device, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Model: Odroid XU3 based on EXYNOS5422
+Type:  hc1
+Net:   No ethernet found.
+Hit any key to stop autoboot:  0
+MMC Device 1 not found
+no mmc device at slot 1
+Card did not respond to voltage select!
+switch to partitions #0, OK
+mmc2 is current device
+Scanning mmc 2:1...
+starting USB...
+USB0:   USB EHCI 1.00
+USB1:   Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+USB2:   Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 1 USB Device(s) found
+scanning bus 1 for devices... cannot reset port 1!?
+1 USB Device(s) found
+scanning bus 2 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+       scanning usb for ethernet devices... 1 Ethernet Device(s) found
+Waiting for Ethernet connection... done.
+BOOTP broadcast 1
+BOOTP broadcast 2
+DHCP client bound to address 192.168.4.21 (2250 ms)
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.vmlinuz'.
+Load address: 0x43e00000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ################################
+         1.2 MiB/s
+done
+Bytes transferred = 7148032 (6d1200 hex)
+missing environment variable: pxeuuid
+Retrieving file: /pxelinux.cfg/C0A80415
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A80415'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A8041
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A8041'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A804
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A804'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A80
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A80'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A8
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A8'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0A
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0A'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C0
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C0'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/C
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/C'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default-arm-exynos
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default-arm-exynos'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default-arm
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default-arm'.
+Load address: 0x51000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+Retrieving file: /pxelinux.cfg/default
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/pxelinux.cfg/default'.
+Load address: 0x51000000
+Loading: #
+         39.1 KiB/s
+done
+Bytes transferred = 693 (2b5 hex)
+Config file found
+FOURGANG BOOTSTRAPPER
+1:      fourgang tftp
+2:      fourgang tftp debug
+Enter choice: 2:        fourgang tftp debug
+Retrieving file: /armhfp.f30.initrd
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.initrd'.
+Load address: 0x43300000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #####################################################
+         1.2 MiB/s
+done
+Bytes transferred = 58025936 (37567d0 hex)
+Retrieving file: /armhfp.f30.vmlinuz
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/armhfp.f30.vmlinuz'.
+Load address: 0x42000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ################################
+         1.3 MiB/s
+done
+Bytes transferred = 7148032 (6d1200 hex)
+append: console=console=tty1 console=ttySAC2,115200n8 cpuidle.off=1 rd.driver.pre=ledtrig-heartbeat,xhci-plat-hcd no_bL_switcher ip=192.168.4.21:192.168.4.10:192.168.4.1:255.255.255.0 debug earlyprintk
+Retrieving file: /dtb/exynos5422-odroidhc1.dtb
+Using r8152#0 device
+TFTP from server 192.168.4.10; our IP address is 192.168.4.21
+Filename '/dtb/exynos5422-odroidhc1.dtb'.
+Load address: 0x43000000
+Loading: ####
+         899.4 KiB/s
+done
+Bytes transferred = 54344 (d448 hex)
+Kernel image @ 0x42000000 [ 0x000000 - 0x6d1200 ]
+## Flattened Device Tree blob at 43000000
+   Booting using the fdt blob at 0x43000000
+   Loading Ramdisk to 4c8a9000, end 4ffff7d0 ... OK
+   Loading Device Tree to 4c898000, end 4c8a8447 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x100
+[    0.000000] Linux version 5.0.9-301.fc30.armv7hl (mockbuild@buildvm-armv7-05.arm.fedoraproject.org) (gcc version 9.0.1 20190312 (Red Hat 9.0.1-0.10) (GCC)) #1 SMP Wed Apr 24 01:39:53 UTC 2019
+[    0.000000] CPU: ARMv7 Processor [410fc073] revision 3 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Hardkernel Odroid HC1
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0xba800000
+[    0.000000] Samsung CPU ID: 0xe5422001
+[    0.000000] On node 0 totalpages: 518656
+[    0.000000]   Normal zone: 1728 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 196608 pages, LIFO batch:63
+[    0.000000]   HighMem zone: 322048 pages, LIFO batch:63
+[    0.000000] Running under secure firmware.
+[    0.000000] percpu: Embedded 16 pages/cpu @(ptrval) s35660 r8192 d21684 u65536
+[    0.000000] pcpu-alloc: s35660 r8192 d21684 u65536 alloc=16*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 516928
+[    0.000000] Kernel command line: console=console=tty1 console=ttySAC2,115200n8 cpuidle.off=1 rd.driver.pre=ledtrig-heartbeat,xhci-plat-hcd no_bL_switcher ip=192.168.4.21:192.168.4.10:192.168.4.1:255.255.255.0 debug earlyprintk
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1915420K/2074624K available (8526K kernel code, 1315K rwdata, 4136K rodata, 2048K init, 515K bss, 93668K reserved, 65536K cma-reserved, 1222656K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (9519 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   (1316 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 516 kB)
+[    0.000000] random: get_random_u32 called from __kmem_cache_create+0x30/0x4b0 with crng_init=0
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] ftrace: allocating 38699 entries in 76 pages
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=32 to nr_cpu_ids=8.
+[    0.000000]  Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] GIC physical location is 0x10481000
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000000] clocksource: mct-frc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000008] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000034] genirq: irq_chip COMBINER did not update eff. affinity mask of irq 49
+[    0.007046] Console: colour dummy device 80x30
+[    0.007127] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=24000)
+[    0.007144] pid_max: default: 32768 minimum: 301
+[    0.007410] LSM: Security Framework initializing
+[    0.007426] Yama: becoming mindful.
+[    0.007456] SELinux:  Initializing.
+[    0.007734] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.007760] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.009192] CPU: Testing write buffer coherency: ok
+[    0.009788] CPU0: thread -1, cpu 0, socket 1, mpidr 80000100
+[    0.011029] Setting up static identity map for 0x40300000 - 0x403000a0
+[    0.011510] ARM CCI driver probed
+[    0.011760] Exynos MCPM support installed
+[    0.014715] rcu: Hierarchical SRCU implementation.
+[    0.021642] EFI services will not be available.
+[    0.022566] smp: Bringing up secondary CPUs ...
+[    0.023816] CPU1: thread -1, cpu 1, socket 1, mpidr 80000101
+[    0.025188] CPU2: thread -1, cpu 2, socket 1, mpidr 80000102
+[    0.026530] CPU3: thread -1, cpu 3, socket 1, mpidr 80000103
+[    0.027885] CPU4: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.027894] CPU4: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.029436] CPU5: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.029443] CPU5: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.030846] CPU6: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.030854] CPU6: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.032230] CPU7: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.032237] CPU7: Spectre v2: firmware did not set auxiliary control register IBE bit, system vulnerable
+[    0.032485] smp: Brought up 1 node, 8 CPUs
+[    0.032504] SMP: Total of 8 processors activated (384.00 BogoMIPS).
+[    0.032516] CPU: WARNING: CPU(s) started in wrong/inconsistent modes (primary CPU mode 0x1a)
+[    0.032524] CPU: This may indicate a broken bootloader or firmware.
+[    0.035773] devtmpfs: initialized
+[    0.052578] VFP support v0.3: implementor 41 architecture 4 part 30 variant f rev 0
+[    0.053175] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.053199] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.055285] pinctrl core: initialized pinctrl subsystem
+[    0.057550] DMI not present or invalid.
+[    0.058091] NET: Registered protocol family 16
+[    0.060150] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.062031] audit: initializing netlink subsys (disabled)
+[    0.062353] audit: type=2000 audit(0.057:1): state=initialized audit_enabled=0 res=1
+[    0.064229] No ATAGs?
+[    0.064648] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.064666] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.066026] Serial: AMBA PL011 UART driver
+[    0.090539] random: fast init done
+[    0.112275] EXYNOS5420 PMU initialized
+[    0.151568] cryptd: max_cpu_qlen set to 1000
+[    0.160052] vgaarb: loaded
+[    0.160791] SCSI subsystem initialized
+[    0.161147] libata version 3.00 loaded.
+[    0.161403] usbcore: registered new interface driver usbfs
+[    0.161469] usbcore: registered new interface driver hub
+[    0.161671] usbcore: registered new device driver usb
+[    0.162518] pps_core: LinuxPPS API ver. 1 registered
+[    0.162531] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.162555] PTP clock support registered
+[    0.163004] EDAC MC: Ver: 3.0.0
+[    0.165368] NetLabel: Initializing
+[    0.165382] NetLabel:  domain hash size = 128
+[    0.165394] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.165493] NetLabel:  unlabeled traffic allowed by default
+[    0.166018] clocksource: Switched to clocksource mct-frc
+[    0.290102] VFS: Disk quotas dquot_6.6.0
+[    0.290189] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.305718] NET: Registered protocol family 2
+[    0.306678] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    0.306718] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.306799] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.306957] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.307150] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.307197] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.307477] NET: Registered protocol family 1
+[    0.307516] NET: Registered protocol family 44
+[    0.307531] PCI: CLS 0 bytes, default 64
+[    0.308148] Unpacking initramfs...
+[    9.436076] random: crng init done
+[   22.865458] Freeing initrd memory: 56668K
+[   22.866811] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[   22.867806] hw perfevents: enabled with armv7_cortex_a15 PMU driver, 7 counters available
+[   22.951482] Initialise system trusted keyrings
+[   22.951532] Key type blacklist registered
+[   22.951792] workingset: timestamp_bits=14 max_order=19 bucket_order=5
+[   22.960660] zbud: loaded
+[   24.220060] alg: No test for 842 (842-generic)
+[   24.226461] alg: No test for 842 (842-scomp)
+[   24.430362] NET: Registered protocol family 38
+[   24.430385] Key type asymmetric registered
+[   24.430398] Asymmetric key parser 'x509' registered
+[   24.430465] bounce: pool size: 64 pages
+[   24.430520] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[   24.430843] io scheduler mq-deadline registered
+[   24.430858] io scheduler kyber registered
+[   24.431233] io scheduler bfq registered
+[   24.431855] atomic64_test: passed
+[   24.458956] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[   24.472105] Serial: AMBA driver
+[   24.472373] 12c00000.serial: ttySAC0 at MMIO 0x12c00000 (irq = 58, base_baud = 0) is a S3C6400/10
+[   24.472931] 12c10000.serial: ttySAC1 at MMIO 0x12c10000 (irq = 59, base_baud = 0) is a S3C6400/10
+[   24.473520] 12c20000.serial: ttySAC2 at MMIO 0x12c20000 (irq = 60, base_baud = 0) is a S3C6400/10
+[   25.343199] printk: console [ttySAC2] enabled
+[   25.348122] 12c30000.serial: ttySAC3 at MMIO 0x12c30000 (irq = 61, base_baud = 0) is a S3C6400/10
+[   25.358685] msm_serial: driver initialized
+[   25.361337] STMicroelectronics ASC driver initialized
+[   25.371642] libphy: Fixed MDIO Bus: probed
+[   25.375101] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   25.380825] ehci-pci: EHCI PCI platform driver
+[   25.385261] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[   25.391383] ohci-pci: OHCI PCI platform driver
+[   25.395946] usbcore: registered new interface driver usbserial_generic
+[   25.402316] usbserial: USB Serial support registered for generic
+[   25.408494] mousedev: PS/2 mouse device common for all mice
+[   25.420312] device-mapper: uevent: version 1.0.3
+[   25.423878] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[   25.433541] failed to register cpuidle driver
+[   25.438176] ledtrig-cpu: registered to indicate activity on CPUs
+[   25.444084] hidraw: raw HID events driver (C) Jiri Kosina
+[   25.448318] usbcore: registered new interface driver usbhid
+[   25.453656] usbhid: USB HID core driver
+[   25.460494] drop_monitor: Initializing network drop monitor service
+[   25.465787] Initializing XFRM netlink socket
+[   25.470380] NET: Registered protocol family 10
+[   25.495964] Segment Routing with IPv6
+[   25.498276] mip6: Mobile IPv6
+[   25.501130] NET: Registered protocol family 17
+[   25.506728] ThumbEE CPU extension supported.
+[   25.509797] Registering SWP/SWPB emulation handler
+[   25.645258] registered taskstats version 1
+[   25.647966] Loading compiled-in X.509 certificates
+[   25.918296] Loaded X.509 cert 'Fedora kernel signing key: 08af1f68c8884cdacdfdb0c046d7ac01f64b95ec'
+[   25.926057] zswap: loaded using pool lzo/zbud
+[   25.951636] Key type big_key registered
+[   25.973717] Key type encrypted registered
+[   25.976331] ima: No TPM chip found, activating TPM-bypass!
+[   25.981778] ima: Allocated hash algorithm: sha1
+[   25.986271] No architecture policies found
+[   26.053805] hctosys: unable to open rtc device (rtc0)
+[   26.089077] samsung-uart 12c20000.serial: DMA RX channel request failed, DMA will not be used
+[   26.104630] Freeing unused kernel memory: 2048K
+[   26.109188] Checked W+X mappings: passed, no W+X pages found
+[   26.113401] rodata_test: test data was not read only
+[   26.118340] Run /init as init process
+[   26.159089] systemd[1]: System time before build time, advancing clock.
+[   26.181152] systemd[1]: systemd v241-7.gita2eaa1c.fc30 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[   26.202801] systemd[1]: No virtualization found in DMI
+[   26.207758] systemd[1]: No virtualization found in CPUID
+[   26.213079] systemd[1]: Virtualization XEN not found, /proc/xen does not exist
+[   26.220459] systemd[1]: No virtualization found in /proc/device-tree/*
+[   26.227212] systemd[1]: UML virtualization not found in /proc/cpuinfo.
+[   26.233418] systemd[1]: This platform does not support /proc/sysinfo
+[   26.239560] systemd[1]: Found VM virtualization none
+[   26.244493] systemd[1]: Detected architecture arm.
+[   26.249247] systemd[1]: Running in initial RAM disk.
+
+Welcome to Fedora 30 (Thirty) dracut-049-26.git20181204.fc30 (Initramfs)!
+
+[   26.374437] systemd-fstab-generator[262]: Could not find a root= entry on the kernel command line.
+[   26.377310] systemd-gpt-auto-generator[263]: Not a EFI boot, not creating root mount.
+[   26.382093] systemd-fstab-generator[262]: Parsing /etc/fstab
+[   26.395879] systemd-fstab-generator[262]: Parsing /sysroot/etc/fstab
+[  OK  ] Listening on Journal Audit Socket.
+[  OK  ] Reached target Slices.
+[  OK  ] Reached target Initrd Root Device.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Reached target Swap.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Journal Socket.
+         Starting Setup Virtual Console...
+         Starting Apply Kernel Variables...
+         Starting Create list of re…odes for the current kernel...
+[  OK  ] Listening on udev Control Socket.
+         Starting Journal Service...
+[   26.745235] systemd[312]: Operating on architecture: arm
+[  OK  ] Listening on udev Kernel Socket.
+[   26.758272] systemd[312]: Operating on architecture: arm
+[   26.763284] systemd[312]: Operating on architecture: arm
+[   26.768479] systemd[312]: Restricting namespace to: .
+[   26.773144] systemd[312]: Operating on architecture: arm
+[   26.778438] systemd[312]: Blocking cgroup.
+[   26.782529] systemd[312]: Blocking ipc.
+[   26.786427] systemd[312]: Blocking net.
+[   26.790292] systemd[312]: Blocking mnt.
+[   26.794036] systemd[312]: Blocking pid.
+[   26.797790] systemd[312]: Blocking user.
+[   26.801693] systemd[312]: Blocking uts.
+[   26.805956] systemd[312]: Operating on architecture: arm
+[  OK  ] Started Setup Virtual Console.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Create list of req… nodes for the current kernel.
+         Starting Create Static Device Nodes in /dev...
+         Starting dracut cmdline hook...
+[  OK  ] Started Create Static Device Nodes in /dev.
+[   26.974441] systemd-journald[312]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+[   26.987770] systemd-journald[312]: Journal effective settings seal=no compress=yes compress_threshold_bytes=512B
+[   26.996776] systemd-journald[312]: Fixed min_use=1.0M max_use=99.5M max_size=12.4M min_size=512.0K keep_free=149.3M n_max_files=100
+[   27.026955] systemd-journald[312]: Reserving 22663 entries in hash table.
+[   27.033753] systemd-journald[312]: Vacuuming...
+[   27.036973] systemd-journald[312]: Vacuuming done, freed 0B of archived journals from /run/log/journal/9c180359aa5c4a2b9749450c7a0b1d98.
+[   27.049134] systemd-journald[312]: Flushing /dev/kmsg...
+[   27.057569] systemd-journald[312]: Compressed data object 537 -> 335 using LZ4
+[   27.086762] systemd-journald[312]: systemd-journald running as pid 312
+[   27.093759] systemd-journald[312]: Sent READY=1 notification.
+[  OK  ] Started Journal Service.
+[   27.108120] audit: type=1130 audit(1555082265.948:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   28.910629] Loading iSCSI transport class v2.0-870.
+[   28.950548] iscsi: registered transport (tcp)
+[   29.023788] iscsi: registered transport (qla4xxx)
+[   29.027133] QLogic iSCSI HBA Driver
+[   29.056337] libcxgbi:libcxgbi_init_module: Chelsio iSCSI driver library libcxgbi v0.9.1-ko (Apr. 2015)
+[   29.120765] Chelsio T3 iSCSI Driver cxgb3i v2.0.1-ko (Apr. 2015)
+[   29.125427] iscsi: registered transport (cxgb3i)
+[   29.225251] Chelsio T4-T6 iSCSI Driver cxgb4i v0.9.5-ko (Apr. 2015)
+[   29.230175] iscsi: registered transport (cxgb4i)
+[   29.234704] cxgb4i:cxgb4i_init_module: cxgb4i dcb enabled.
+[   29.267928] cnic: QLogic cnicDriver v2.5.22 (July 20, 2015)
+[   29.289183] QLogic NetXtreme II iSCSI Driver bnx2i v2.7.10.1 (Jul 16, 2014)
+[   29.294795] iscsi: registered transport (bnx2i)
+[   29.329608] iscsi: registered transport (be2iscsi)
+[   29.332968] In beiscsi_module_init, tt=ef77a6ae
+[   29.574921] dracut-cmdline[315]: Warning: Empty autoco[   29.584521] dracut: FATAL: For argument 'ip=192.168.4.21:192.168.4.10:192.168.4.1:255.255.255.0'\nSorry, setting client-ip does not make sense for 'dhcp'
+[   29.597564] dracut: Refusing to continue
+nf values default to dhcp
+[   29.649361] dracut-cmdline[315]: Bus n/a: changing state UNSET → OPENING
+[   29.658507] dracut-cmdline[315]: Bus n/a: changing state OPENING → AUTHENTICATING
+[   29.669973] dracut-cmdline[315]: Bus n/a: changing state AUTHENTICATING → RUNNING
+[   29.681310] dracut-cmdline[315]: Sent message type=method_call sender=n/a destination=org.freedesktop.systemd1 path=/org/freedesktop/systemd1 interface=org.freedesktop.systemd1.Manager member=Halt cookie=1 reply_cookie=0 signature=n/a error-name=n/a error-message=n/a
+[   29.707462] dracut-cmdline[315]: Got message type=method_return sender=org.freedes[   29.718829] printk: systemd-shutdow: 494 output lines suppressed due to ratelimiting
+ktop.systemd1 destination=n/a path=n/a interface=n/a member=n/a cookie=1 reply_cookie=1 signature=n/a error-name=n/a error-message=n/a
+[   29.736499] dracut-cmdline[315]: Bus n/a: changing state RUNNING → CLOSED
+[   29.754253] systemd-shutdown[1]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+[   29.796843] systemd-shutdown[1]: Successfully forked off '(sd-sync)' as PID 574.
+[   29.802827] systemd-shutdown[1]: Syncing filesystems and block devices.
+[   29.809668] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[   29.834108] printk: systemd-journal: 11 output lines suppressed due to ratelimiting
+[   29.841178] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[   29.862225] systemd-shutdown[1]: Unmounting file systems.
+[   29.868670] systemd-shutdown[1]: Successfully forked off '(sd-remount)' as PID 575.
+[   29.870863] [575]: Remounting '/' read-only in with options 'size=957708k,nr_inodes=173191'.
+[   29.885504] systemd-shutdown[1]: All filesystems unmounted.
+[   29.889936] systemd-shutdown[1]: Deactivating swaps.
+[   29.894785] systemd-shutdown[1]: All swaps deactivated.
+[   29.912653] reboot: System halted

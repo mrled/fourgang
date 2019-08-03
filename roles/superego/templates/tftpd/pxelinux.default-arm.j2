@@ -1,0 +1,15 @@
+menu title FOURGANG BOOTSTRAPPER
+timeout 50
+default fourgang tftp debug
+
+label fourgang tftp
+    kernel {{ tftp_kernel_filename }}
+    append console=console=tty1 console=ttySAC2,115200n8 cpuidle.off=1 rd.driver.pre=ledtrig-heartbeat,xhci-plat-hcd no_bL_switcher ip=${ipaddr}:${serverip}:${gatewayip}:${netmask}
+    fdt dtb/{{ tftp_dtb_filename }}
+    initrd {{ tftp_initrd_filename }}
+
+label fourgang tftp debug
+    kernel {{ tftp_kernel_filename }}
+    append console=console=tty1 console=ttySAC2,115200n8 cpuidle.off=1 rd.driver.pre=ledtrig-heartbeat,xhci-plat-hcd no_bL_switcher ip=${ipaddr}:${serverip}:${gatewayip}:${netmask} debug earlyprintk
+    fdt dtb/{{ tftp_dtb_filename }}
+    initrd {{ tftp_initrd_filename }}
