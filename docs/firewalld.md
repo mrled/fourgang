@@ -7,3 +7,28 @@ also if I disable firewalld on both client and server, TFTP works.
 But it doesn't work if EITHER has it enabled.
 (this is after i disabled ipv6)
 (although i still see ipv6-to-4 addresses in syslog sometimes, no fucking idea why)
+
+## Fedora minimal vs server
+
+Minimal uses "public" as default zone.
+Server uses "FedoraServer".
+Argh.
+
+## Useful commands:
+
+    systemctl status firewalld
+
+    # show default zone
+    firewall-cmd --get-default-zone
+
+    # allowed services
+    firewall-cmd --list-services
+    # allowed ports
+    firewall-cmd --list-ports
+
+    # show zones attached to interfaces
+    firewall-cmd --get-active-zones
+
+    # after modifying rules you MUST
+    firewall-cmd --reload
+

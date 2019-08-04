@@ -33,6 +33,4 @@ bind_responsible_party: me\.micahrl.com
 cluster_ifname: GANG4
 cluster_ifdevice: eth0
 
-# The "default" zone appears to be called "public",
-# and yet interfaces appear to belong to the "FedoraServer" zone?
-fedora_firewalld_zone: FedoraServer
+fedora_firewalld_zone: public

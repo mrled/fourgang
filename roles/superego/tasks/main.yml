@@ -25,7 +25,7 @@
   tags: named
 
 - name: Allow BIND through the firewall
-  firewalld: service=dns permanent=yes state=enabled zone={{ fedora_firewalld_zone }}
+  firewalld: service=dns permanent=yes immediate=yes state=enabled zone={{ fedora_firewalld_zone }}
   tags: named
 
 - name: Enable BIND
@@ -50,7 +50,7 @@
   tags: dhcpd
 
 - name: Allow DHCPD through the firewall
-  firewalld: service=dhcp permanent=yes state=enabled zone={{ fedora_firewalld_zone }}
+  firewalld: service=dhcp permanent=yes immediate=yes state=enabled zone={{ fedora_firewalld_zone }}
   tags: dhcpd
 
 - name: Enable DHCPD
@@ -87,7 +87,7 @@
   tags: tftpd
 
 - name: Allow tftpd through the firewall
-  firewalld: service=tftp permanent=yes state=enabled zone={{ fedora_firewalld_zone }}
+  firewalld: service=tftp permanent=yes immediate=yes state=enabled zone={{ fedora_firewalld_zone }}
   tags: tftpd
 
 - name: Enable tftpd
@@ -118,3 +118,9 @@
   template: src=egoboost/ego.uenv.txt.j2 dest={{ egoboost_lib_directory }}/ego.uenv.txt mode=0644 owner=root group=root
   tags: egoboost
 
+- name: Install required egobuilder packages
+  package: name={{ item }} state=latest
+  with_items:
+    - libvirt
+    - libguestfs-tools
+  tags: egobuilder
