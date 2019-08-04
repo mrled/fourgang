@@ -168,7 +168,9 @@ Implementation:
 * A powered USB2 hub I had lying around that runs on 5v
 * One downside is that the rpi and USB2 hub run on 5V, while the rest of my cluster runs on 12V. This means I need either a separate powersupply, some kind of step down board for each device, or to use wall warts. I went with the last option for now.
 
-### Initial configuration
+### Initial configuration - OLD
+
+**THIS IS THE OLD WAY - using an rpi. See the new way later**
 
 Configuration of this is MANUAL, meaning we do a regular Fedora install and configure the rpi over its serial with a USB TTL cable.
 We need one manually configured machine to host the network configuration.
@@ -274,3 +276,22 @@ or if it looses a connection somehow, you won't have a good way to monitor progr
 even after you ssh back in.
 
 	dnf upgrade --refresh -y
+
+### Initial system config - new Odroid XU4Q
+
+<https://blog.pcfe.net/hugo/posts/2019-01-27-fedora-29-on-odroid-hc2/>
+
+very similar to above but needs sd card fusing
+
+I removed the rpi superego01 and did initial setup the same.
+
+Also I decided to install tmux before updating dnf or anything eles. Was worth it.
+
+TODO: merge the above section with this one, and move the above to docs/ somewhere for posterity.
+
+Interestingly, I didn't need to `xfs_growfs` because this time I used the minimal image, not the server image.
+I guess there is a bug in `fedora-arm-image-installer`;
+it is designed for the default case (ext4 on workstation and apparently minimal builds),
+but server has XFS.
+
+holy SHIT this is so much faster than my rpi2. It's INSANE.
