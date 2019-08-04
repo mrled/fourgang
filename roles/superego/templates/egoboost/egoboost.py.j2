@@ -52,11 +52,6 @@ def main(*args, **kwargs):
         '--u-boot', choices=['hardkernel', 'rpm'], required=True,
         help="Use Das U-Boot from either HardKernel's repo or the 'uboot-images-armv7' RPM")
     parser.add_argument(
-        '--uenv', required=True, help='Location to uEnv.txt u-boot boot script')
-    parser.add_argument(
-        '--tmpmount', default='/tmp/egoboost-boot',
-        help='Temporary mount location. Not under /mnt, which may be another mounted fs.')
-    parser.add_argument(
         'memcard', help='Device path to the memory card (whole card, NOT partition')
     parsed = parser.parse_args()
 
@@ -101,15 +96,6 @@ def main(*args, **kwargs):
 
     subprocess.run(['sfdisk', parsed.memcard], input=sfdisk_dump.encode(), check=True)
     subprocess.run(['mkfs.vfat', '-n', 'boot', partition_one], check=True)
-
-    os.makedirs(parsed.tmpmount, exist_ok=True)
-    subprocess.run(['mount', partition_one, parsed.tmpmount], check=True)
-    try:
-        shutil.copy(parsed.uenv, f'{parsed.tmpmount}/uEnv.txt')
-    finally:
-        subprocess.run(['umount', parsed.tmpmount], check=True)
-
-    print("uEnv.txt copied successfully")
 
     print("Fusing BL1...")
     dd_dsync(firmware['bl1'], parsed.memcard, signed_bl1_position)

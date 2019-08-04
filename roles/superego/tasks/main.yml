@@ -74,6 +74,13 @@
   notify: restart tftpd
   tags: tftpd
 
+- name: Create tftpboot subdirs
+  file: path={{ tftp_dir }}/{{ item }} state=directory owner=root group=root mode=0755
+  with_items:
+    - dtb
+    - pxelinux.cfg
+  tags: tftpd
+
 - name: Retrieve kernel and initrd
   get_url: url={{ item.url }} dest={{ item.dest }} mode=0644
   with_items:
@@ -83,7 +90,7 @@
   tags: tftpd
 
 - name: Install pxelinux configuration
-  template: src=tftpd/pexelinux.default-arm.j2 dest={{ tftp_pxelinuxcfg }} mode=0644
+  template: src=tftpd/pxelinux.default-arm.j2 dest={{ tftp_pxelinuxcfg }} mode=0644
   tags: tftpd
 
 - name: Allow tftpd through the firewall
@@ -112,10 +119,6 @@
 - name: Install egoboost firmware etc
   copy: src={{ item }} dest={{ egoboost_lib_directory }}/ mode=0644 owner=root group=root
   with_fileglob: egoboost/*
-  tags: egoboost
-
-- name: Install ego U-Boot script script
-  template: src=egoboost/ego.uenv.txt.j2 dest={{ egoboost_lib_directory }}/ego.uenv.txt mode=0644 owner=root group=root
   tags: egoboost
 
 - name: Install required egobuilder packages

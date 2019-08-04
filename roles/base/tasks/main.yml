@@ -1,5 +1,8 @@
 ---
 
+- name: Populate service facts
+  service_facts:
+
 # Stupid bug means nmcli module is broken anyway
 # https://github.com/ansible/ansible/issues/48055
 # - name: Install Ansible prereqs for nmcli module
@@ -43,13 +46,17 @@
 
 - name: Disable the Fedora Cockpit service
   systemd: name=cockpit enabled=no state=stopped
-  when: ansible_distribution == 'Fedora'
+  when:
+    - "'cockpit' in ansible_facts.services"
 
 - name: Block the Fedora Cockpit port
   firewalld: service=cockpit permanent=yes state=disabled zone={{ fedora_firewalld_zone }}
-  when: ansible_distribution == 'Fedora'
+  when:
+    - "'cockpit' in ansible_facts.services"
 
 - name: Ensure system is up to date
   dnf: name="*" state=latest
-  when: ansible_distribution == 'Fedora' and update_system_packages
+  when:
+    - ansible_distribution == 'Fedora'
+    - update_system_packages
 
