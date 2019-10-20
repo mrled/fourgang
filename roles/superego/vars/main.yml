@@ -6,6 +6,9 @@
 # If it's the epoch, it will increment (a lot) on every deployment.
 bind_zone_serial: "{{ ansible_date_time.epoch }}"
 
+egoboost_lib_directory: /usr/local/var/lib/egoboost
+egobuilder_lib_directory: /usr/local/var/lib/egobuilder
+
 dhcpd_unknown_client_min_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_unknown_client_min_offset) | ipaddr('address')  }}"
 dhcpd_unknown_client_max_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_unknown_client_max_offset) | ipaddr('address')  }}"
 dhcpd_known_client_min_addr: "{{ cluster_ipv4net | ipaddr(dhcpd_known_client_min_offset) | ipaddr('address') }}"
@@ -17,9 +20,13 @@ tftp_initrd: "{{ tftp_dir }}/{{ tftp_initrd_filename }}"
 tftp_dtb: "{{ tftp_dir }}/dtb/{{ tftp_dtb_filename }}"
 tftp_pxelinuxcfg: "{{ tftp_dir }}/pxelinux.cfg/{{ tftp_pxelinuxcfg_filename }}"
 
-fedora_armhfp_images_uri: http://download.fedoraproject.org/pub/fedora/linux/releases/30/Server/armhfp/os/images/pxeboot
+fedora_mirror_root: http://download.fedoraproject.org/pub/fedora/linux/releases
+fedora_armhfp_images_uri: "{{ fedora_mirror_root }}/30/Server/armhfp/os/images/pxeboot"
 fedora_armhfp_kernel: "{{ fedora_armhfp_images_uri }}/vmlinuz"
 fedora_armhfp_initrd: "{{ fedora_armhfp_images_uri }}/initrd.img"
 fedora_armhfp_dtb: "{{ fedora_armhfp_images_uri }}/dtb/exynos5422-odroidhc1.dtb"
 
-egoboost_lib_directory: /usr/local/var/lib/egoboost
+fedora_armhfp_image_filename: "Fedora-Minimal-armhfp-30-1.2-sda.raw.xz"
+fedora_armhfp_image_checksum: "sha256:cb4cbdb375cc8cd02eb6497d2632d844b5d063efde7fc5493a263814c77a297a"
+fedora_armhfp_image_uri: "{{ fedora_mirror_root }}/30/Spins/armhfp/images/{{ fedora_armhfp_image_filename }}"
+fedora_armhfp_image_localpath: "{{ egobuilder_lib_directory }}/{{ fedora_armhfp_image_filename }}"

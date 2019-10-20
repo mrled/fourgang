@@ -52,7 +52,7 @@ def main(*args, **kwargs):
         '--u-boot', choices=['hardkernel', 'rpm'], required=True,
         help="Use Das U-Boot from either HardKernel's repo or the 'uboot-images-armv7' RPM")
     parser.add_argument(
-        'memcard', help='Device path to the memory card (whole card, NOT partition')
+        'memcard', help='Device path to the memory card (whole card, NOT partition)')
     parsed = parser.parse_args()
 
     if not is_block_device(parsed.memcard):

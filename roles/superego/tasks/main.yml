@@ -124,6 +124,18 @@
 - name: Install required egobuilder packages
   package: name={{ item }} state=latest
   with_items:
-    - libvirt
     - libguestfs-tools
+    - libvirt
+    - virt-install
+  tags: egobuilder
+
+- name: Create egobuilder lib directory
+  file: path={{ egobuilder_lib_directory }} state=directory mode=0755 owner=root group=root
+  tags: egobuilder
+
+- name: Retrieve Fedora Minimal ARM image
+  get_url:
+    url: "{{ fedora_armhfp_image_uri }}"
+    dest: "{{ fedora_armhfp_image_localpath }}"
+    checksum: "{{ fedora_armhfp_image_checksum }}"
   tags: egobuilder
